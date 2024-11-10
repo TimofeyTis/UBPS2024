@@ -1,0 +1,454 @@
+\documentclass[11pt, russian]{standalone}
+
+
+
+% стилевой пакет для написания диссертации в Latex согласно ГОСТ ТГУ
+% автор к.ф.-м.н., доцент Семенова Дарья Владиславовна, dariasdv@gmail.com
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+% шрифты
+\usepackage[T1,T2A]{fontenc} %кодировки
+\usepackage[english,russian]{babel} 
+\usepackage[utf8]{inputenc} %кодировки
+\RequirePackage{pscyr} % !!! набор русских шрифтов А. Лебедева (http://tex.imm.uran.ru/texserver/fonts/pscyr/pscyr4c/). Нужен для отображения заголовков в BOLD ARIAL, BOLD ITALIC ARIAL. Этот пакет необходимо установить, если хотите смотреть Сборник УБС "as it is".
+
+% \usepackage{literat} % Красивые русские шрифты. Инструкция по установке здесь http://blog.harrix.org/article/444
+\usepackage{textcomp} % стилевой пакет textcomp, открывающий доступ к большому числу типографских значков
+%математические шрифты и оформления
+\usepackage{amsmath, amssymb, mathrsfs} 
+\usepackage{amsfonts}
+\usepackage{amstext}
+\usepackage{amsthm}
+\usepackage{cases}
+\usepackage{mathtext} % Русские буквы в формулах
+\usepackage[mathscr]{eucal}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+% оформление текста
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+% Пакеты для красивых таблиц в LaTeX
+% почитать можно здесь http://mydebianblog.blogspot.ru/2013/01/advanced-tables-in-latex.html
+\usepackage{booktabs} % Книжные таблицы  
+\usepackage{array} % таблицы 
+\usepackage{longtable} % многостраничные таблицы
+\usepackage{tabularx} % стоит использовать для создания больших и сложных таблиц с разделением по страницам, с кучей текста в ячейках
+\usepackage{multirow} % улучшенное форматирование таблиц
+\usepackage{color,colortbl} % цветные таблицы
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5555
+% Графические пакеты 
+%\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{er}
+\usetikzlibrary{automata}
+\usetikzlibrary{graphs}
+\usetikzlibrary{intersections}
+\usetikzlibrary{positioning}
+\usetikzlibrary{arrows}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{spy}
+\usepackage{pgf}
+\usepackage{pgfplots}
+
+\pgfplotsset{compat=1.17}
+%\usetikzlibrary{calc}
+\usepackage{tikz-cd}
+\usetikzlibrary{decorations.pathmorphing}
+%\usepackage{pgfplots}
+% \usepackage{pdfpages}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+% заголовки
+% \usepackage{topcapt}
+\usepackage{titlesec}
+\usepackage{caption} % продвинутые заголовки 
+\usepackage{subcaption}
+\usepackage{tocloft} % оформление оглавлений 
+\usepackage{float} %плавающие объекты
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+%навигация 
+\usepackage{makeidx} %предметный указатель
+%гиперссылки
+\usepackage[colorlinks, linkcolor=black, citecolor=black, urlcolor=black, pdftex, pdfhighlight=/O]{hyperref} 
+% для печати надо linkcolor=black
+\usepackage{cite}% управление библиографией
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%555
+
+% алгоритмы на псевдокоде
+
+\usepackage[ruled]{algorithm}
+\usepackage{ifthen} %простейшие средства программирования 
+\usepackage{algpseudocode}
+\usepackage{enumitem}
+\usepackage{textcase} 
+
+
+\renewcommand{\rmdefault}{ftm} % Times New Roman
+
+
+
+
+
+
+
+    
+    
+      
+\usepackage{diagbox}
+
+\usepackage{pgfplots}
+\usepackage{xcolor, colortbl}
+
+
+
+\definecolor{sfugrey}{RGB}{253, 252, 247}
+\definecolor{sfublack}{RGB}{4, 89, 163}
+\definecolor{sfured}{RGB}{251, 180, 98}
+
+
+
+\usetikzlibrary {patterns.meta}
+\pgfdeclarepattern{
+  name=hatch,
+  parameters={\hatchsize,\hatchangle,\hatchlinewidth},
+  bottom left={\pgfpoint{-.1pt}{-.1pt}},
+  top right={\pgfpoint{\hatchsize+.1pt}{\hatchsize+.1pt}},
+  tile size={\pgfpoint{\hatchsize}{\hatchsize}},
+  tile transformation={\pgftransformrotate{\hatchangle}},
+  code={
+    \pgfsetlinewidth{\hatchlinewidth}
+    \pgfpathmoveto{\pgfpoint{-.1pt}{-.1pt}}
+    \pgfpathlineto{\pgfpoint{\hatchsize+.1pt}{\hatchsize+.1pt}}
+    \pgfpathmoveto{\pgfpoint{-.1pt}{\hatchsize+.1pt}}
+    \pgfpathlineto{\pgfpoint{\hatchsize+.1pt}{-.1pt}}
+    \pgfusepath{stroke}
+  }
+}
+\usetikzlibrary{backgrounds}
+
+\tikzset{
+  hatch size/.store in=\hatchsize,
+  hatch angle/.store in=\hatchangle,
+  hatch line width/.store in=\hatchlinewidth,
+  hatch size=5pt,
+  hatch angle=0pt,
+  hatch line width=.5pt,
+}
+
+
+
+%\renewcommand\thesubfigure{(\Asbuk)}
+
+    
+      
+\usepackage{diagbox}
+
+\usepackage{pgfplots}
+\usepackage{xcolor, colortbl}
+
+
+
+\definecolor{sfugrey}{RGB}{253, 252, 247}
+\definecolor{sfublack}{RGB}{4, 89, 163}
+\definecolor{sfured}{RGB}{251, 180, 98}
+
+
+
+
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{shapes, arrows, chains}
+
+\tikzset{
+  hatch size/.store in=\hatchsize,
+  hatch angle/.store in=\hatchangle,
+  hatch line width/.store in=\hatchlinewidth,
+  hatch size=5pt,
+  hatch angle=0pt,
+  hatch line width=.5pt,
+}
+
+
+\tikzset{
+	line/.style={draw, -latex'},
+	every join/.style={line1},
+	u/.style={anchor=south},
+	r/.style={anchor=west},
+	fxd/.style={text width = 6em},
+	it/.style={font={\small\itshape}},
+	bf/.style={font={\small\bfseries}}
+}
+\tikzstyle{base} =
+	[
+		draw,
+		on chain,
+		on grid,
+		align=center,
+		minimum height=4ex,
+		minimum width = 30ex,
+		node distance = 6mm and 60mm,
+		text badly centered
+	]
+\tikzstyle{line1} =
+	[
+		line,
+		line width =0.13em, arrows = {-Stealth[inset=0pt, angle=30:0.6em]}
+	]
+\tikzstyle{coord} =
+	[
+		coordinate,
+		on chain,
+		on grid
+	]
+\tikzstyle{cloud} =
+	[
+		base,
+		ellipse,
+		fill = red!5,
+		node distance = 3cm,
+		minimum height = 2em
+	]
+\tikzstyle{decision} =
+	[
+		base,
+		diamond,
+		aspect=2,
+		fill = green!10,
+		node distance = 2cm,
+		inner sep = 0pt
+	]
+\tikzstyle{block} =
+	[
+		rectangle,
+		base,
+		fill = blue!0,
+		minimum height = 2em
+	]
+\tikzstyle{print_block} =
+	[
+		base,
+		tape,
+		tape bend top=none,
+		fill = yellow!10
+	]
+\tikzstyle{io} =
+	[
+		base,
+		trapezium,
+		trapezium left angle = 70,
+		trapezium right angle = 110,
+		fill = blue!5
+	]
+\makeatletter
+\pgfkeys{/pgf/.cd,
+	subrtshape w/.initial=2mm,
+	cycleshape w/.initial=2mm
+}
+\pgfdeclareshape{subrtshape}{
+	\inheritsavedanchors[from=rectangle]
+	\inheritanchorborder[from=rectangle]
+	\inheritanchor[from=rectangle]{north}
+	\inheritanchor[from=rectangle]{center}
+	\inheritanchor[from=rectangle]{west}
+	\inheritanchor[from=rectangle]{east}
+	\inheritanchor[from=rectangle]{mid}
+	\inheritanchor[from=rectangle]{base}
+	\inheritanchor[from=rectangle]{south}
+	\backgroundpath{
+		\southwest \pgf@xa=\pgf@x \pgf@ya=\pgf@y
+		\northeast \pgf@xb=\pgf@x \pgf@yb=\pgf@y
+		\pgfmathsetlength\pgfutil@tempdima{\pgfkeysvalueof{/pgf/subrtshape w}}
+		\def\ppd@offset{\pgfpoint{\pgfutil@tempdima}{0ex}}
+		\def\ppd@offsetm{\pgfpoint{-\pgfutil@tempdima}{0ex}}
+		\pgfpathmoveto{\pgfqpoint{\pgf@xa}{\pgf@ya}}
+		\pgfpathlineto{\pgfqpoint{\pgf@xb}{\pgf@ya}}
+		\pgfpathlineto{\pgfqpoint{\pgf@xb}{\pgf@yb}}
+		\pgfpathlineto{\pgfqpoint{\pgf@xa}{\pgf@yb}}
+		\pgfpathclose
+		\pgfpathmoveto{\pgfpointadd{\pgfpoint{\pgf@xa}{\pgf@yb}}{\ppd@offsetm}}
+		\pgfpathlineto{\pgfpointadd{\pgfpoint{\pgf@xa}{\pgf@ya}}{\ppd@offsetm}}
+		\pgfpathlineto{\pgfpointadd{\pgfpoint{\pgf@xb}{\pgf@ya}}{\ppd@offset}}
+		\pgfpathlineto{\pgfpointadd{\pgfpoint{\pgf@xb}{\pgf@yb}}{\ppd@offset}}
+		\pgfpathclose
+	}
+}
+\pgfdeclareshape{cyclebegshape}{
+	\inheritsavedanchors[from=rectangle]
+	\inheritanchorborder[from=rectangle]
+	\inheritanchor[from=rectangle]{north}
+	\inheritanchor[from=rectangle]{center}
+	\inheritanchor[from=rectangle]{west}
+	\inheritanchor[from=rectangle]{east}
+	\inheritanchor[from=rectangle]{mid}
+	\inheritanchor[from=rectangle]{base}
+	\inheritanchor[from=rectangle]{south}
+	\backgroundpath{
+		\southwest \pgf@xa=\pgf@x \pgf@ya=\pgf@y
+		\northeast \pgf@xb=\pgf@x \pgf@yb=\pgf@y
+		\pgfmathsetlength\pgfutil@tempdima{\pgfkeysvalueof{/pgf/cycleshape w}}
+		\pgfpathmoveto{\pgfqpoint{\pgf@xa}{\pgf@ya}}
+\pgfpathlineto{\pgfpointadd{\pgfpoint{\pgf@xa}{\pgf@yb}}{\pgfpoint{0ex}{-\pgfutil@tempdima}}}
+\pgfpathlineto{\pgfpointadd{\pgfpoint{\pgf@xa}{\pgf@yb}}{\pgfpoint{\pgfutil@tempdima}{0ex}}}
+\pgfpathlineto{\pgfpointadd{\pgfpoint{\pgf@xb}{\pgf@yb}}{\pgfpoint{-\pgfutil@tempdima}{0ex}}}
+\pgfpathlineto{\pgfpointadd{\pgfpoint{\pgf@xb}{\pgf@yb}}{\pgfpoint{0ex}{-\pgfutil@tempdima}}}
+\pgfpathlineto{\pgfqpoint{\pgf@xb}{\pgf@ya}}
+		\pgfpathclose
+	}
+}
+\pgfdeclareshape{cycleendshape}{
+	\inheritsavedanchors[from=rectangle]
+	\inheritanchorborder[from=rectangle]
+	\inheritanchor[from=rectangle]{north}
+	\inheritanchor[from=rectangle]{center}
+	\inheritanchor[from=rectangle]{west}
+	\inheritanchor[from=rectangle]{east}
+	\inheritanchor[from=rectangle]{mid}
+	\inheritanchor[from=rectangle]{base}
+	\inheritanchor[from=rectangle]{south}
+	\backgroundpath{
+		\southwest \pgf@xa=\pgf@x \pgf@ya=\pgf@y
+		\northeast \pgf@xb=\pgf@x \pgf@yb=\pgf@y
+		\pgfmathsetlength\pgfutil@tempdima{\pgfkeysvalueof{/pgf/cycleshape w}}
+		\pgfpathmoveto{\pgfqpoint{\pgf@xb}{\pgf@yb}}
+\pgfpathlineto{\pgfpointadd{\pgfpoint{\pgf@xb}{\pgf@ya}}{\pgfpoint{0ex}{\pgfutil@tempdima}}}
+\pgfpathlineto{\pgfpointadd{\pgfpoint{\pgf@xb}{\pgf@ya}}{\pgfpoint{-\pgfutil@tempdima}{0ex}}}
+\pgfpathlineto{\pgfpointadd{\pgfpoint{\pgf@xa}{\pgf@ya}}{\pgfpoint{\pgfutil@tempdima}{0ex}}}
+\pgfpathlineto{\pgfpointadd{\pgfpoint{\pgf@xa}{\pgf@ya}}{\pgfpoint{0ex}{\pgfutil@tempdima}}}
+\pgfpathlineto{\pgfqpoint{\pgf@xa}{\pgf@yb}}
+		\pgfpathclose
+	}
+}
+\makeatother
+
+\tikzstyle{subroutine} =
+	[
+		base,
+		subrtshape,
+		fill = green!25
+	]
+\tikzstyle{cyclebegin} =
+	[
+		base,
+		cyclebegshape,
+		fill = blue!0
+	]
+\tikzstyle{cycleend} =
+	[
+		base,
+		cycleendshape,
+		fill = blue!0
+	]
+\tikzstyle{connector} =
+	[
+		base,
+		circle,
+		fill = red!25
+	]
+
+
+\begin{document}
+
+\begin{tikzpicture}[%
+		start chain=going below,    % General flow is top-to-bottom
+		node distance=6mm and 60mm, % Global setup of box spacing
+	]
+	\node [color = red!70,](start0) at (0em,0em)  {\textbf{МОДУЛЬ СИМУЛЯЦИИ}};
+	\node [draw = red!70,cloud, below left = 2.5em and 0em of start0] (start)  {Начало};
+	\node [draw = red!70,block, below = 4.5em of start, join] (phase1) {импорт дорожной\\сети map.osm};
+	\node [draw = red!70,block, below = 3.5em of phase1,  join] (phase2) {чтение\\VehicleConfig.xml};\
+	\node [draw = red!70,block, below = 3.5em of phase1, right  = 35ex of phase2 ] (phase3) {построение \\дорожного графа\\ $G=\left(N;\; E\right)$};
+	\path [line1] (phase1.east) -|  (phase3.north);
+
+	\node [draw = red!70,block, below = 4em of  phase3,  join] (phase4) {построение путей \\на графе};
+	\node [draw = red!70,block, below = 5em of  phase4,  join] (phase5) {расчет матриц \\корреспонденций потоков\\дорожного трафика};
+	\node [below  =  1.5em of phase5,  join] (pseudophase6) { };
+	\path [line1] (phase5) --  (pseudophase6.north);
+
+	\node [block,  below right  = 4.5em and 18ex  of phase5] (phase6) {\parbox{65ex}{\centering перенос параметров в имитационную модель}};
+
+	\node [draw = red!70,block, below = 8em of phase2] (phase7) {перенос параметров\\в модель IDM, MOBIL};
+	\path [line1] (phase2.south) -|  (phase7.north);
+	\path [line1] (phase4.west) -|  (phase7.north);
+
+	\path [line1] (phase7) |-  (phase6);
+
+	% \draw[-, black ] ($(phase5.east)+(1em,-2em)$) --  ($(phase5.east)+(1em,18em)$);
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\node [color = blue!70,right = 26em of  start0 ](start1)  {\parbox{20em}{\centering\textbf{МОДУЛЬ АДАПТИВНОГО УПРАВЛЕНИЯ}\\\textbf{СВЕТОФОРНЫМИ ОБЪЕКТАМИ}}};
+	\node [draw = blue!70,block, below right  = 4.5em and 108ex of start] (phase11) {чтение\\TrafficLightConfig.xml};
+	\path [line1] (start.south) |- ($(start.south) + (108ex,-1em)$) -- (phase11.north);
+
+	\node [draw = blue!70,block, below right  = 0em and 35ex  of phase3] (phase12) {определение зон\\детекции};
+	\path [line1] (phase3.east) --  (phase12.west);
+
+	\node [draw = blue!70,block, below right  = 3.5em and 0em  of phase11] (phase13) {определение множества\\светофоров $TL$};
+	\path [line1] (phase11.south) -|  (phase13.north);
+	\node [draw = blue!70,block, below right  = 3.5em and 0em  of phase13,  join] (phase14) {определение функций\\обучения $Q$};
+	\path [line1] (phase12.east) |- ($(phase12.east) + (1.5em,0)$) |-  (phase14.west);
+
+	\node [draw = blue!70,block, below right  = 4em and 0em  of phase12 ] (phase15) {блок выбора\\стратегий};
+	\node [draw = blue!70,block, below right  = 3.8em and 0em  of phase15, join ] (phase16) {совокупное \\управление $TL$};
+	\path [line1] (phase14.south) |-   (phase16.east);
+
+	\node [below   = 3.3em of phase16 ] (pseudophase16) {};
+	\path [line1] (phase16.south) --   (pseudophase16.north);
+
+	% \draw[-, black ] ($(phase14.east)+(1em,-5.5em)$) --  ($(phase14.east)+(1em,14.5em)$);
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\node[color = green!70,below  = 34em  of  start] (start2)  {\textbf{МОДУЛЬ ВАЛИДАЦИИ}};
+
+	\node [draw = green!70,block, above left  = 2em and 0em  of start2] (phase21) {чтение\\TrafficFlowData.csv};
+	\path [line1] (start.south) |- ($(start.south) + (-8em,-1em)$)  |-  (phase21.west);
+	\node [draw = green!70,block, above right  = 4em and 0em  of phase21, join] (phase22) {предобработка данных о\\ плотностях распределений\\интенсивностей  т.с. };
+	\node [draw = green!70,block, above right  = 5em and 0em  of phase22] (phase23) {имитационное\\ моделирование\\ интенсивностей  т.с. };
+	\path [line1] (phase22.north) -| (phase23.south);
+
+	\path [line1] (phase23.east) -| ($(pseudophase6.south) + (0em,-1.2em)$) ;
+
+	% \draw[-, black ] ($(phase5.east)+(1em,-6em)$) --  ($(phase5.east)+(1em,-21em)$);
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\node [color = brown!70,below = 36em of  start1] (start3)  {\textbf{МОДУЛЬ ВИЗУАЛИЗАЦИИ}};
+
+\node [draw = brown!70,draw = brown!70,block, below right= 12em and 0em  of phase14] (phase31) {шаг имитационной модели\\ sim.run($dt$)};
+\node [draw = brown!70,block, below right= 3.5em and 0em  of phase31] (phase34) {отрисовка кадра};
+\node [draw = brown!70,block, below right= 3em and 0em  of phase34, join] (phase37) {$t=t+dt$};
+\node [draw = brown!70,cycleend, below right  = 3em and 0em  of phase37, join] (phase32) {};
+\node [draw = brown!70,block, below left= 0em and 38ex  of phase34] (phase36) {окно pygame};
+
+
+\node [draw = brown!70,cyclebegin, above right  = 3.5em and 0em  of phase31, ] (phase30) {$t<T$};
+
+
+
+\path [line1] (phase30.south) --   (phase31.north);
+\path [line1] (phase31.south) --   (phase34.north);
+\path [line1] (phase34.west) --   (phase36.east);
+\path [line1] (phase6.east) -|  ($(phase30.north) - (8em,-1em)$) -|   (phase30.north);
+
+
+
+
+
+% \path [line ,line width =0.1em, arrows = {-Stealth[inset=0pt, angle=30:10pt]}]
+
+
+
+	%         \node [block, join] (phase1) {Этап 1};
+	%         \node [cyclebegin, join=by red] (phase2) {Этап 2};
+	%         \node [block, join=by green] (phase3) {Этап 3};
+	%         \node [cycleend, join] (phase4) {Этап 4};
+	%         \node [subroutine, join, subrtshape w = 3mm, fxd] (phase5) {Этап 5 1 2 3 4 5 6 7 8
+	% 9 0};
+	%         \node [io, join, fxd] (input) {Этап 6 - ввод данных};
+	%         \node [block, join] (phase7) {Этап 7};
+	%         \node [decision, join] (condition) {Условие};
+	%         \node [connector] (finish) {Конец};
+	%         % \node [block, left of = phase4, node distance = 3cm] (correction) {Коррекция};
+	%         \node [print_block, right of = phase4, node distance = 3cm] (print) {Print};
+	%         \path [line, red] (condition) -| node [u,near start] {Нет} (correction);
+	%         \path [line] (correction) |- (phase1);
+	%         \path [line] (phase2) -| node [r,near end] {Печать} (print);
+	%         \path [line, green] (condition) to node [r] {Да}(finish);
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,172 @@
+\documentclass[10pt, russian]{standalone}
+
+
+% стилевой пакет для написания диссертации в Latex согласно ГОСТ ТГУ
+% автор к.ф.-м.н., доцент Семенова Дарья Владиславовна, dariasdv@gmail.com
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+% шрифты
+\usepackage[T2A]{fontenc} %кодировки
+\usepackage[english,russian]{babel} 
+\usepackage[utf8]{inputenc} %кодировки
+% \usepackage{literat} % Красивые русские шрифты. Инструкция по установке здесь http://blog.harrix.org/article/444
+%математические шрифты и оформления
+\usepackage{amsmath, amssymb, mathrsfs} 
+\usepackage{amsfonts}
+\usepackage{amstext}
+\usepackage{amsthm}
+\usepackage{cases}
+\usepackage{mathtext} % Русские буквы в формулах
+\usepackage[mathscr]{eucal}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+% оформление текста
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+% Пакеты для красивых таблиц в LaTeX
+% почитать можно здесь http://mydebianblog.blogspot.ru/2013/01/advanced-tables-in-latex.html
+\usepackage{booktabs} % Книжные таблицы  
+\usepackage{array} % таблицы 
+\usepackage{longtable} % многостраничные таблицы
+\usepackage{tabularx} % стоит использовать для создания больших и сложных таблиц с разделением по страницам, с кучей текста в ячейках
+\usepackage{multirow} % улучшенное форматирование таблиц
+\usepackage{color,colortbl} % цветные таблицы
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5555
+% Графические пакеты 
+%\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{er}
+\usetikzlibrary{automata}
+\usetikzlibrary{graphs}
+\usetikzlibrary{intersections}
+\usetikzlibrary{positioning}
+\usetikzlibrary{arrows}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{spy}
+\usepackage{pgf}
+\usepackage{pgfplots}
+
+\pgfplotsset{compat=1.17}
+%\usetikzlibrary{calc}
+\usepackage{tikz-cd}
+%\usepackage{pgfplots}
+% \usepackage{pdfpages}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+% заголовки
+% \usepackage{topcapt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+%навигация 
+\usepackage{makeidx} %предметный указатель
+%гиперссылки
+\usepackage[colorlinks, linkcolor=black, citecolor=black, urlcolor=black, pdftex, pdfhighlight=/O]{hyperref} 
+% для печати надо linkcolor=black
+\usepackage{cite}% управление библиографией
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%555
+
+% алгоритмы на псевдокоде
+
+\usepackage[ruled]{algorithm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\renewcommand{\rmdefault}{ftm} % Times New Roman
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5555
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55555
+% маркер списков
+
+\usepackage{pgfplots}
+\usepackage{xcolor, colortbl}
+
+
+
+\definecolor{sfugrey}{RGB}{255, 255, 255}
+\definecolor{sfublack}{RGB}{178, 178, 178}
+\definecolor{sfured}{RGB}{251, 180, 98}
+
+
+
+\usetikzlibrary {patterns.meta}
+
+\usetikzlibrary{backgrounds}
+
+\tikzset{
+  hatch size/.store in=\hatchsize,
+  hatch angle/.store in=\hatchangle,
+  hatch line width/.store in=\hatchlinewidth,
+  hatch size=5pt,
+  hatch angle=0pt,
+  hatch line width=.5pt,
+}
+
+
+\begin{document}
+
+\tikzset{
+my dash/.style={thick,dash pattern=on 30pt off 15pt,line width=2.5pt
+                }
+         }% end of tikzset
+
+    
+\begin{tikzpicture}[font=\fontsize{24}{24}\selectfont]
+
+
+
+
+
+
+    \def\vehicle{-- ++(2cm,0cm) -- ++(0cm,1cm) -- ++(-2cm,0cm) -- cycle}
+
+    \def\road {-- ++(12cm,0cm) -- ++(0cm,2cm) -- ++(-12cm,0cm) -- cycle}
+
+
+
+
+    \draw[fill = sfublack, draw =  black] node[below left =0.5cm and 0.25cm]{$R$} (0cm,-2cm)   \road;
+    \begin{scope}[shift={(0,2.1)}]
+        \draw[fill = sfublack, draw =  black] node[below left =0.5cm and 0.25cm]{$L$}  (0cm,-2cm)  \road;
+    \end{scope}
+
+
+
+    \draw[fill = sfugrey] (0cm,-1.5cm)  \vehicle;
+    \draw  (1cm,-1cm) node[text =  black]{$i+1$}; 
+
+    \begin{scope}[shift={(3cm,-.0cm)},rotate=10]
+        \draw[fill = sfugrey, draw = red!80, line width = 1.5pt ] (0cm,-1.5cm) \vehicle ;
+        \draw[->]  (1cm,-1cm) --node[above right]{} (1.35cm,0.5cm);
+        \draw[->]  (1cm,-1cm) node[left, text =  black]{$i$}--node[below right]{$a_{i}$} (5cm,-1.3cm); 
+    \end{scope}
+    \begin{scope}[shift={(6.5cm,2cm)}]
+        \draw[fill = sfugrey, draw = red!80, line width = 1.5pt, dashed ] (0cm,-1.5cm) \vehicle ;
+        \draw[->] (1cm,-1.cm)  node[left, text =  black]{$\tilde{i}$} --node[below right]{$\widetilde{a_i}$} (3cm,-1.cm);
+    \end{scope}
+    
+    \draw[black,->, dashed, line width = 1pt] (5.2cm,-0.7cm) to [bend right=25] (7.7cm,0.5cm);
+        
+    \begin{scope}[shift={(9cm,-.0cm)},rotate=0]
+        \draw[fill = sfugrey, text =  black] (0cm,-1.5cm) \vehicle ;
+    \end{scope}
+
+    
+    \begin{scope}[shift={(0cm,2cm)}]
+        \draw[fill = sfugrey, text =  black] (0cm,-1.5cm) \vehicle ;
+        \draw[->] (1cm,-1.cm)  node[left, text =  black]{$j$} --node[below right]{$a_{j}$} (3cm,-1.cm);
+
+    \end{scope}
+
+
+\end{tikzpicture}
+
+\end{document}
