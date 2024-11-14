@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.9)  12 NOV 2024 12:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.9)  14 NOV 2024 08:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -636,6 +636,11 @@ Overfull \hbox (6.81355pt too wide) in paragraph at lines 141--141
  []
 
 
+Overfull \hbox (0.96965pt too wide) in paragraph at lines 141--142
+ [][] 
+ []
+
+
 
 [2]
 
@@ -646,26 +651,37 @@ Overfull \hbox (60.45444pt too wide) has occurred while \output is active
 
 [3]
 
-LaTeX Warning: Reference `par:MARL_description' on page 4 undefined on input line 166.
+LaTeX Warning: Reference `par:MARL_description' on page 4 undefined on input line 163.
 
 
-LaTeX Warning: Reference `par:MARL_many_description' on page 4 undefined on input line 166.
+LaTeX Warning: Reference `par:MARL_many_description' on page 4 undefined on input line 163.
+
+
+LaTeX Font Warning: Font shape `T2A/far/b/n' in size <10.95> not available
+(Font)              Font shape `T2A/far/bx/n' tried instead on input line 168.
+
+
+LaTeX Font Warning: Font shape `T2A/far/b/it' in size <10.95> not available
+(Font)              Font shape `T2A/far/bx/it' tried instead on input line 168.
 
 
 
 [4]
 
-LaTeX Font Warning: Font shape `T2A/far/b/n' in size <10.95> not available
-(Font)              Font shape `T2A/far/bx/n' tried instead on input line 171.
+LaTeX Warning: Citation `' on page 5 undefined on input line 175.
 
 
-LaTeX Font Warning: Font shape `T2A/far/b/it' in size <10.95> not available
-(Font)              Font shape `T2A/far/bx/it' tried instead on input line 171.
+LaTeX Warning: Citation `' on page 5 undefined on input line 175.
 
-<structure.pdf, id=27, 690.75264pt x 441.96014pt>
+
+Underfull \hbox (badness 1024) in paragraph at lines 174--178
+\T2A/ftm/m/n/10.95 в ра-бо-тах [[]] в 2023 и [[]] в 2024. В ра-бо-те при-ве-де-ны
+ []
+
+<structure.pdf, id=28, 690.75264pt x 441.96014pt>
 File: structure.pdf Graphic file (type pdf)
 <use structure.pdf>
-Package pdftex.def Info: structure.pdf  used on input line 178.
+Package pdftex.def Info: structure.pdf  used on input line 184.
 (pdftex.def)             Requested size: 304.21854pt x 194.64514pt.
 
 
@@ -686,28 +702,30 @@ Package pdftex.def Info: sim_descr.pdf  used on input line 19.
 (pdftex.def)             Requested size: 199.73645pt x 70.90445pt.
 
 
-[6 <./sim_descr.pdf>]
-<mobil.pdf, id=98, 374.3596pt x 117.05632pt>
-File: mobil.pdf Graphic file (type pdf)
-<use mobil.pdf>
-Package pdftex.def Info: mobil.pdf  used on input line 58.
-(pdftex.def)             Requested size: 153.64487pt x 48.04341pt.
-
+[6]
 
 
 Overfull \hbox (60.45444pt too wide) has occurred while \output is active
  \T2A/ftm/m/it/10.95 Программы и системы моделирования объектов, средств и систем управления
  []
 
-[7]
+[7 <./sim_descr.pdf>]
+<mobil.pdf, id=105, 374.3596pt x 117.05632pt>
+File: mobil.pdf Graphic file (type pdf)
+<use mobil.pdf>
+Package pdftex.def Info: mobil.pdf  used on input line 58.
+(pdftex.def)             Requested size: 153.64487pt x 48.04341pt.
+
+
+[8 <./mobil.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ./model_ex.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<model_ex.pdf, id=106, 1056.10564pt x 534.43665pt>
+<model_ex.pdf, id=129, 1056.10564pt x 534.43665pt>
 File: model_ex.pdf Graphic file (type pdf)
 <use model_ex.pdf>
 Package pdftex.def Info: model_ex.pdf  used on input line 93.
 (pdftex.def)             Requested size: 147.49776pt x 74.63306pt.
-<SV-VIS_78.jpg, id=107, 266.49562pt x 149.8097pt>
+<SV-VIS_78.jpg, id=130, 266.49562pt x 149.8097pt>
 File: SV-VIS_78.jpg Graphic file (type jpg)
 <use SV-VIS_78.jpg>
 Package pdftex.def Info: SV-VIS_78.jpg  used on input line 93.
@@ -717,9 +735,7 @@ Overfull \hbox (2.99924pt too wide) in paragraph at lines 93--94
  [] 
  []
 
-
-
-[8 <./mobil.pdf>]) (./validation.tex
+) (./validation.tex
 
 LaTeX Warning: Citation `OMSK' on page 9 undefined on input line 6.
 
@@ -734,23 +750,25 @@ Overfull \hbox (60.45444pt too wide) has occurred while \output is active
  []
 
 [9 <./model_ex.pdf> <./SV-VIS_78.jpg>]
-<EM_yad_oc_dens1.png, id=144, 836.12375pt x 836.12375pt>
-File: EM_yad_oc_dens1.png Graphic file (type png)
-<use EM_yad_oc_dens1.png>
-Package pdftex.def Info: EM_yad_oc_dens1.png  used on input line 62.
-(pdftex.def)             Requested size: 107.55328pt x 92.18004pt.
-<EM_yad_oc_dens2.png, id=147, 836.12375pt x 836.12375pt>
-File: EM_yad_oc_dens2.png Graphic file (type png)
-<use EM_yad_oc_dens2.png>
-Package pdftex.def Info: EM_yad_oc_dens2.png  used on input line 63.
-(pdftex.def)             Requested size: 107.55328pt x 92.18004pt.
-
 
 [10]
+
+LaTeX Warning: Citation `omsk' on page 11 undefined on input line 48.
+
+<EM_yad_oc_dens1.png, id=149, 836.12375pt x 836.12375pt>
+File: EM_yad_oc_dens1.png Graphic file (type png)
+<use EM_yad_oc_dens1.png>
+Package pdftex.def Info: EM_yad_oc_dens1.png  used on input line 65.
+(pdftex.def)             Requested size: 107.55328pt x 92.18004pt.
+<EM_yad_oc_dens2.png, id=152, 836.12375pt x 836.12375pt>
+File: EM_yad_oc_dens2.png Graphic file (type png)
+<use EM_yad_oc_dens2.png>
+Package pdftex.def Info: EM_yad_oc_dens2.png  used on input line 66.
+(pdftex.def)             Requested size: 107.55328pt x 92.18004pt.
 <EM_revive_density_function.png, id=154, 1002.74625pt x 668.4975pt>
 File: EM_revive_density_function.png Graphic file (type png)
 <use EM_revive_density_function.png>
-Package pdftex.def Info: EM_revive_density_function.png  used on input line 71.
+Package pdftex.def Info: EM_revive_density_function.png  used on input line 74.
 (pdftex.def)             Requested size: 215.10188pt x 158.90897pt.
 ) (./adapt.tex
 Underfull \hbox (badness 1043) in paragraph at lines 5--7
@@ -779,9 +797,9 @@ Overfull \hbox (60.45444pt too wide) has occurred while \output is active
  \T2A/ftm/m/it/10.95 Программы и системы моделирования объектов, средств и систем управления
  []
 
-[11 <./EM_yad_oc_dens1.png> <./EM_yad_oc_dens2.png> <./EM_revive_density_function.png>]
+[11 <./EM_yad_oc_dens1.png> <./EM_yad_oc_dens2.png>]
 
-[12]
+[12 <./EM_revive_density_function.png>]
 Overfull \hbox (9.12785pt too wide) in paragraph at lines 36--50
 [] 
  []
@@ -794,25 +812,41 @@ Overfull \hbox (60.45444pt too wide) has occurred while \output is active
  []
 
 [13]
-Underfull \hbox (badness 2875) in paragraph at lines 88--92
-[]\T2A/ftm/m/it/10.95 [[]] Для за-да-чи по-ис-ка оп-ти-маль-но-го
- []
+LaTeX Font Info:    Trying to load font information for TS1+ftm on input line 92.
+LaTeX Font Info:    No file TS1ftm.fd. on input line 92.
 
-LaTeX Font Info:    Trying to load font information for TS1+ftm on input line 93.
-LaTeX Font Info:    No file TS1ftm.fd. on input line 93.
 
 LaTeX Font Warning: Font shape `TS1/ftm/m/n' undefined
 (Font)              using `TS1/cmr/m/n' instead
-(Font)              for symbol `textbullet' on input line 93.
+(Font)              for symbol `textbullet' on input line 92.
 
-<mod_scheme.pdf, id=174, 351.20007pt x 252.23134pt>
-File: mod_scheme.pdf Graphic file (type pdf)
-<use mod_scheme.pdf>
-Package pdftex.def Info: mod_scheme.pdf  used on input line 133.
-(pdftex.def)             Requested size: 215.10188pt x 154.48822pt.
 
 
 [14{c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+<mod_scheme.pdf, id=178, 351.20007pt x 252.23134pt>
+File: mod_scheme.pdf Graphic file (type pdf)
+<use mod_scheme.pdf>
+Package pdftex.def Info: mod_scheme.pdf  used on input line 132.
+(pdftex.def)             Requested size: 215.10188pt x 154.48822pt.
+
+
+LaTeX Warning: Citation `My3' on page 15 undefined on input line 144.
+
+
+LaTeX Warning: Citation `refarticle5' on page 15 undefined on input line 144.
+
+
+LaTeX Warning: Citation `refarticle6' on page 15 undefined on input line 144.
+
+
+LaTeX Warning: Citation `refarticle7' on page 15 undefined on input line 144.
+
+
+Underfull \hbox (badness 1472) in paragraph at lines 138--151
+\T2A/ftm/m/n/10.95 вре-мя на-хож-де-ния в зоне де-тек-ции с мно-же-ством тер-мов
+ []
+
+
 
 
 Overfull \hbox (60.45444pt too wide) has occurred while \output is active
@@ -820,29 +854,18 @@ Overfull \hbox (60.45444pt too wide) has occurred while \output is active
  []
 
 [15 <./mod_scheme.pdf>]
-
-[16]) (./calc.tex
-<learningcurve20.png, id=211, 1011.78pt x 289.08pt>
-File: learningcurve20.png Graphic file (type png)
-<use learningcurve20.png>
-Package pdftex.def Info: learningcurve20.png  used on input line 19.
-(pdftex.def)             Requested size: 261.19815pt x 74.6297pt.
-<learningcurve21.png, id=212, 1011.78pt x 144.54pt>
-File: learningcurve21.png Graphic file (type png)
-<use learningcurve21.png>
-Package pdftex.def Info: learningcurve21.png  used on input line 19.
-(pdftex.def)             Requested size: 261.19815pt x 37.31483pt.
-<learningcurve2.png, id=213, 1011.78pt x 433.62pt>
-File: learningcurve2.png Graphic file (type png)
-<use learningcurve2.png>
-Package pdftex.def Info: learningcurve2.png  used on input line 20.
-(pdftex.def)             Requested size: 261.19815pt x 111.94455pt.
-
-Overfull \hbox (9.83923pt too wide) in paragraph at lines 18--22
- [][] 
+Overfull \hbox (2.28928pt too wide) detected at line 156
+[]
  []
 
 
+Overfull \hbox (2.28928pt too wide) in alignment at lines 155--156
+[] [] 
+ []
+
+) (./calc.tex
+
+[16]
 
 
 Overfull \hbox (60.45444pt too wide) has occurred while \output is active
@@ -850,31 +873,16 @@ Overfull \hbox (60.45444pt too wide) has occurred while \output is active
  []
 
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 71--71
-[][]\T2A/ftm/m/n/10.95 Целевая
- []
+
+LaTeX Warning: Reference `table:strategies' on page 18 undefined on input line 51.
 
 
-Underfull \vbox (badness 10000) detected at line 71
- []
 
+[18]
 
-Underfull \vbox (badness 10000) detected at line 71
- []
+LaTeX Warning: Reference `table:compar1' on page 19 undefined on input line 77.
 
 )
-
-[18 <./learningcurve20.png> <./learningcurve21.png> <./learningcurve2.png>]
-Underfull \hbox (badness 1442) in paragraph at lines 218--219
-[]\T2A/ftm/m/n/10.95 N. H. Gartner, "OPAC: Strategy for Demand-responsive
- []
-
-
-Underfull \hbox (badness 4792) in paragraph at lines 218--219
-\T2A/ftm/m/n/10.95 Decentralized Traffic Signal Control,"IFAC Proceedings
- []
-
-
 
 
 Overfull \hbox (60.45444pt too wide) has occurred while \output is active
@@ -882,44 +890,54 @@ Overfull \hbox (60.45444pt too wide) has occurred while \output is active
  []
 
 [19]
-Underfull \hbox (badness 1688) in paragraph at lines 222--223
+Underfull \hbox (badness 1442) in paragraph at lines 224--225
+[]\T2A/ftm/m/n/10.95 N. H. Gartner, "OPAC: Strategy for Demand-responsive
+ []
+
+
+Underfull \hbox (badness 4792) in paragraph at lines 224--225
+\T2A/ftm/m/n/10.95 Decentralized Traffic Signal Control,"IFAC Proceedings
+ []
+
+
+Underfull \hbox (badness 1688) in paragraph at lines 229--230
 []\T2A/ftm/m/n/10.95 M. Treiber, A. Hennecke, and D. Helbing, "Congested
  []
 
 
-Underfull \hbox (badness 2181) in paragraph at lines 222--223
+Underfull \hbox (badness 2181) in paragraph at lines 229--230
 \T2A/ftm/m/n/10.95 traffic states in empirical observations and microscopic
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 228--229
+Underfull \hbox (badness 10000) in paragraph at lines 235--236
 []\T2A/ftm/m/n/10.95 Boeing, G., OSMnx: Python for Street Networks.
  []
 
 
-Underfull \hbox (badness 5787) in paragraph at lines 228--229
+Underfull \hbox (badness 5787) in paragraph at lines 235--236
 \T2A/ftm/m/n/10.95 [Элек-трон-ный ре-сурс]. ^^U 2024. ^^U Ре-жим до-сту-па:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 234--235
-[]\T2A/ftm/m/n/10.95 Маршалл, А., "Copulas, Marginals, and Joint
- []
-
-
-Underfull \hbox (badness 2521) in paragraph at lines 238--239
-[]\T2A/ftm/m/n/10.95 Эпанечников, В. А., "Non-Parametric Estimation of a
  []
 
 
 
 [20]
-Underfull \hbox (badness 3907) in paragraph at lines 252--253
+Underfull \hbox (badness 10000) in paragraph at lines 241--242
+[]\T2A/ftm/m/n/10.95 Marshall, A., "Copulas, Marginals, and Joint
+ []
+
+
+Underfull \hbox (badness 2495) in paragraph at lines 245--246
+[]\T2A/ftm/m/n/10.95 Epanechnikov, V. A., "Non-Parametric Estimation of a
+ []
+
+
+Underfull \hbox (badness 3907) in paragraph at lines 259--260
 []\T2A/ftm/m/n/10.95 R. S. Sutton, A. G. Barto, Reinforcement Learning:
  []
 
 
-Underfull \hbox (badness 1968) in paragraph at lines 252--253
+Underfull \hbox (badness 1968) in paragraph at lines 259--260
 \T2A/ftm/m/n/10.95 An Introduction, 2nd ed., The MIT Press, Cambridge,
  []
 
@@ -932,7 +950,14 @@ Overfull \hbox (60.45444pt too wide) has occurred while \output is active
 
 [21]
 
-[22] (./overleaf-copy.aux
+[22]
+
+
+Overfull \hbox (60.45444pt too wide) has occurred while \output is active
+ \T2A/ftm/m/it/10.95 Программы и системы моделирования объектов, средств и систем управления
+ []
+
+[23] (./overleaf-copy.aux
 LaTeX Font Info:    Trying to load font information for T1+ftm on input line 6.
  (c:/texlive/texmf-local/tex/latex/pscyr/t1ftm.fd
 File: t1ftm.fd 2004/03/23 Fontinst v1.914 font definitions for T1/ftm.
@@ -950,18 +975,18 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 8070 strings out of 473578
- 126634 string characters out of 5732243
- 1941960 words of memory out of 5000000
- 30755 multiletter control sequences out of 15000+600000
- 586144 words of font info for 92 fonts, out of 8000000 for 9000
+ 8029 strings out of 473578
+ 125814 string characters out of 5732243
+ 1945960 words of memory out of 5000000
+ 30724 multiletter control sequences out of 15000+600000
+ 584598 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,23n,79p,1896b,403s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/texmf-local/fonts/type1/public/pscyr/arial.pfb><c:/texlive/texmf-local/fonts/type1/public/pscyr/arialbd.pfb><c:/texlive/texmf-local/fonts/type1/public/pscyr/arialbi.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><c:/texlive/texmf-local/fonts/type1/public/pscyr/times.pfb><c:/texlive/texmf-local/fonts/type1/public/pscyr/times.pfb><c:/texlive/texmf-local/fonts/type1/public/pscyr/timesbd.pfb><c:/texlive/texmf-local/fonts/type1/public/pscyr/timesi.pfb>
-Output written on overleaf-copy.pdf (22 pages, 3839522 bytes).
+ 71i,23n,79p,1896b,347s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/texmf-local/fonts/type1/public/pscyr/arial.pfb><c:/texlive/texmf-local/fonts/type1/public/pscyr/arialbd.pfb><c:/texlive/texmf-local/fonts/type1/public/pscyr/arialbi.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><c:/texlive/texmf-local/fonts/type1/public/pscyr/times.pfb><c:/texlive/texmf-local/fonts/type1/public/pscyr/times.pfb><c:/texlive/texmf-local/fonts/type1/public/pscyr/timesbd.pfb><c:/texlive/texmf-local/fonts/type1/public/pscyr/timesi.pfb>
+Output written on overleaf-copy.pdf (23 pages, 785101 bytes).
 PDF statistics:
- 311 PDF objects out of 1000 (max. 8388607)
- 206 compressed objects within 3 object streams
+ 300 PDF objects out of 1000 (max. 8388607)
+ 202 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 103 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 88 words of extra memory for PDF output out of 10000 (max. 10000000)
 

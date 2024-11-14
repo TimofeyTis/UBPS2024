@@ -126,7 +126,7 @@ Moscow, student (viktor.sidorov@mipt.ru). }
   \caption{Распространенные модели  АСУДД}
   \label{tab:adapt}
   \centering
-  \scalebox{0.65}{
+  \scalebox{0.68}{
     \begin{tabular}{|c||c|c|c|c|c|c|}\hline
       \textbf{Критерий} & \textbf{UTCS-1}                       & \textbf{SCOOT}                          & \textbf{OPAC}                                                  & \parbox{0.2\textwidth}{\centering\rule{0em}{1.2em}\textbf{АСУДД} \\\textbf{<<Микро>>}\rule[-0.5em]{0em}{1.2em}} & \textbf{MARLIN}\\ \hline
       город             & Вашингтон                             & Лондон                                  & \parbox{0.2\textwidth}{\centering \rule{0em}{1.2em}Арлингтон,                                                                                    \\Тускон\rule[-0.5em]{0em}{1.2em}}  & Красноярск & Торонто\\ \hline
@@ -136,7 +136,7 @@ Moscow, student (viktor.sidorov@mipt.ru). }
       предсказание      & нет                                   & \multicolumn{4}{c|}{есть}                                                                       \\ \hline
       устройство        & \multicolumn{2}{c|}{централизованная} & \multicolumn{3}{c|}{децентрализованная}                                                                                                                                                    \\ \hline
       \parbox{0.2\textwidth}{\centering\rule{0em}{1.2em}основные                                                                                                                                                                                             \\ограничения\rule[-0.5em]{0em}{1.2em}}   & \parbox{0.2\textwidth}{\centering\rule{0em}{1.2em}постоянный\\сбор данных} & \parbox{0.15\textwidth}{\centering \rule{0em}{1.2em}сенсоры \\далеко} & \parbox{0.2\textwidth}{\centering \rule{0em}{1.2em}только для\\  8 фаз}&  \parbox{0.2\textwidth}{\centering \rule{0em}{1.2em}находится \\в разработке} & \parbox{0.25\textwidth}{\centering <<ПРОКЛЯТИЕ\\РАЗМЕРНОСТИ>>} \\ \hline
-      работы, авторы &&&&&\\\hline
+      % работы, авторы &&&&&\\\hline
     \end{tabular}
   }
 \end{table}
@@ -152,7 +152,7 @@ Moscow, student (viktor.sidorov@mipt.ru). }
 
 В работах \cite{el-tantawy2013, tislenko2022a, tislenko2022b} для адаптивного управления светофорными объектами было предложено использовать  метод мультиагентного обучения с подкреплением.  
 Данный подход получил название MARLIN (Multiagent Reinforcement Learning for Integrated Network) и  был успешно применен в современной АСУДД в Канаде. Целью обучения с подкреплением является сокращение времени проезда транспортных средств через выбранные участки дорожной сети. Управление светофорными объектами считается эффективным, если транспортные средства находятся на детектируемых участках менее двух циклов.
- Для работы требуется установка камер на расстоянии менее ста метров от стоп-линий. Агенты (светофоры) могут работать без информации о полной дорожной обстановке и управлять движением децентрализованно. Перечисленные особенности можно отнести к достоинствам подхода на основе MARLIN. Существенным ограничением является рост вычислительной сложности при увеличении обзора агента, известный как <<проклятие размерности>>.
+Для работы требуется установка камер на расстоянии менее ста метров от стоп-линий. Агенты (светофоры) могут работать без информации о полной дорожной обстановке и управлять движением децентрализованно. Перечисленные особенности можно отнести к достоинствам подхода на основе MARLIN. Существенным ограничением является рост вычислительной сложности при увеличении обзора агента, известный как <<проклятие размерности>>.
 
 % Как альтернатива к применяемым на практике АСУДД, в работе  предложен метод адаптивного управления, использующий  мультиагентное обучение с подкреплением (Multiagent Reinforcement Learning for Integrated Network, MARLIN)\cite{MARL}, основанные на марковских процессах принятия решений, которые могут и не оперировать интенсивностью проезда через поперечное сечение дороги.
 
@@ -223,7 +223,8 @@ Moscow, student (viktor.sidorov@mipt.ru). }
 
   \bibitem{gartner1990} N. H. Gartner, "OPAC: Strategy for Demand-responsive Decentralized Traffic Signal Control," IFAC Proceedings Volumes, vol. 23, no. 2, pp. 241–244, 1990. 
 
-  \bibitem{asudd} ASUDD "Micro-M".
+  \bibitem{asudd} ASUDD "Micro-M," Available: {http://asud55.ru/archives/1346} (accessed: 20.12.2020).
+
 
   \bibitem{IDM} M. Treiber, A. Hennecke, and D. Helbing, "Congested traffic states in empirical observations and microscopic simulations," {Transportation Physics Reviews E}, vol. 62, pp. 1805–1824, 2000.
 
@@ -235,17 +236,17 @@ Moscow, student (viktor.sidorov@mipt.ru). }
 
 
   
-  \bibitem{nelsen2006introduction} Нельсен, Р. Б.,{An Introduction to Copulas}. Springer, 2006.--270с.
+  \bibitem{nelsen2006introduction} Nelsen, R. B., {An Introduction to Copulas}. Springer, 2006. — 270~с.
 
-  \bibitem{marshall1996copulas} Маршалл, А., "Copulas, Marginals, and Joint Distributions," {Lecture Notes-Monograph Series. Distributions with Fixed Marginals and Related Topics}, 1996, no. 28, pp. 213–222.
+  \bibitem{marshall1996copulas} Marshall, A., "Copulas, Marginals, and Joint Distributions," {Lecture Notes-Monograph Series. Distributions with Fixed Marginals and Related Topics}, 1996, no.~28, pp.~213--222.
 
-  \bibitem{Quesada} Кесада-Молина, Х. Х., и Родригес-Лаллена, Х. А., "Bivariate copulas with quadratic sections," {Journal of Nonparametric Statistics}, 1995, pp. 323–337.
+  \bibitem{Quesada} Quesada-Molina, J. J., Rodr?guez-Lallena, J. A., "Bivariate copulas with quadratic sections," {Journal of Nonparametric Statistics}, 1995, pp.~323--337.
 
-  \bibitem{Epanechnikov} Эпанечников, В. А., "Non-Parametric Estimation of a Multivariate Probability Density," {Theory of Probability and Its Applications}, 1969, pp. 153–158.
+  \bibitem{Epanechnikov} Epanechnikov, V. A., "Non-Parametric Estimation of a Multivariate Probability Density," {Theory of Probability and Its Applications}, 1969, pp.~153--158.
 
-  \bibitem{EM} Бишоп, К. М., {Pattern Recognition and Machine Learning}. Springer, 2007.
+  \bibitem{EM}C. M. Bishop, {Pattern Recognition and Machine Learning}. Springer, 2007.
 
-  \bibitem{Voitisheck} Войтишек, А. В., {Основы метода Монте-Карло: Учебное пособие}, ред. В. Н. Задорожный. Новосибирск: НГУ, 2010. "--- 108 с.
+  \bibitem{Voitisheck} А.\,В. Войтишек, {Основы метода Монте-Карло: Учебное пособие}, ред. В.\,Н. Задорожный. Новосибирск: НГУ, 2010. — 108~с.
 
 
 
