@@ -129,49 +129,45 @@ Moscow, student (viktor.sidorov@mipt.ru). }
   \centering
   \scalebox{0.68}{
     \begin{tabular}{|c||c|c|c|c|c|c|}\hline
-      \textbf{Критерий} & \textbf{UTCS-1}                       & \textbf{SCOOT}                          & \textbf{OPAC}                                                  & \parbox{0.2\textwidth}{\centering\rule{0em}{1.2em}\textbf{АСУДД} \\\textbf{<<Микро>>}\rule[-0.5em]{0em}{1.2em}} & \textbf{MARLIN}\\ \hline
-      город             & Вашингтон                             & Лондон                                  & \parbox{0.2\textwidth}{\centering \rule{0em}{1.2em}Арлингтон,                                                                                    \\Тускон\rule[-0.5em]{0em}{1.2em}}  & Красноярск & Торонто\\ \hline
-      \parbox{0.2\textwidth}{\centering\rule{0em}{1.2em}временной                                                                                                                                                                                            \\период} &1970е&1995&1983,1989 & 1993& 2010\\ \hline
-      \parbox{0.2\textwidth}{\centering\rule{0em}{1.2em}длительность                                                                                                                                                                                         \\фаз\rule[-0.5em]{0em}{1.2em}} & \multicolumn{2}{c|}{фиксированная}  & \multicolumn{3}{c|}{переменная}  \\ \hline
-      оптимизация       & офлайн                                & \multicolumn{4}{c|}{онлайн}                                                                                                                                                                \\ \hline
-      предсказание      & нет                                   & \multicolumn{4}{c|}{есть}                                                                       \\ \hline
-      устройство        & \multicolumn{2}{c|}{централизованная} & \multicolumn{3}{c|}{децентрализованная}                                                                                                                                                    \\ \hline
-      \parbox{0.2\textwidth}{\centering\rule{0em}{1.2em}основные                                                                                                                                                                                             \\ограничения\rule[-0.5em]{0em}{1.2em}}   & \parbox{0.2\textwidth}{\centering\rule{0em}{1.2em}постоянный\\сбор данных} & \parbox{0.15\textwidth}{\centering \rule{0em}{1.2em}сенсоры \\далеко} & \parbox{0.2\textwidth}{\centering \rule{0em}{1.2em}только для\\  8 фаз}&  \parbox{0.2\textwidth}{\centering \rule{0em}{1.2em}находится \\в разработке} & \parbox{0.25\textwidth}{\centering <<ПРОКЛЯТИЕ\\РАЗМЕРНОСТИ>>} \\ \hline
+      \textbf{Критерий} & \textbf{UTCS-1}                       & \textbf{SCOOT}                          & \textbf{OPAC}                                                 & \parbox{0.2\textwidth}{\centering\rule{0em}{1.2em}\textbf{АСУДД} \\\textbf{<<Микро>>}\rule[-0.5em]{0em}{1.2em}} & \textbf{MARLIN}\\ \hline
+      город             & Вашингтон                             & Лондон                                  & \parbox{0.2\textwidth}{\centering \rule{0em}{1.2em}Арлингтон,                                                                    \\Тускон\rule[-0.5em]{0em}{1.2em}}  & Красноярск & Торонто\\ \hline
+      \parbox{0.2\textwidth}{\centering\rule{0em}{1.2em}временной                                                                                                                                                                            \\период} &1970е&1995&1983,1989 & 1993& 2010\\ \hline
+      \parbox{0.2\textwidth}{\centering\rule{0em}{1.2em}длительность                                                                                                                                                                         \\фаз\rule[-0.5em]{0em}{1.2em}} & \multicolumn{2}{c|}{фиксированная}  & \multicolumn{3}{c|}{переменная}  \\ \hline
+      оптимизация       & офлайн                                & \multicolumn{4}{c|}{онлайн}                                                                                                                                                \\ \hline
+      предсказание      & нет                                   & \multicolumn{4}{c|}{есть}                                                                                                                                                  \\ \hline
+      устройство        & \multicolumn{2}{c|}{централизованная} & \multicolumn{3}{c|}{децентрализованная}                                                                                                                                    \\ \hline
+      \parbox{0.2\textwidth}{\centering\rule{0em}{1.2em}основные                                                                                                                                                                             \\ограничения\rule[-0.5em]{0em}{1.2em}}   & \parbox{0.2\textwidth}{\centering\rule{0em}{1.2em}постоянный\\сбор данных} & \parbox{0.15\textwidth}{\centering \rule{0em}{1.2em}сенсоры \\далеко} & \parbox{0.2\textwidth}{\centering \rule{0em}{1.2em}только для\\  8 фаз}&  \parbox{0.2\textwidth}{\centering \rule{0em}{1.2em}находится \\в разработке} & \parbox{0.25\textwidth}{\centering <<ПРОКЛЯТИЕ\\РАЗМЕРНОСТИ>>} \\ \hline
       % работы, авторы &&&&&\\\hline
     \end{tabular}
   }
 \end{table}
 
+Одна из ранних систем управления городским дорожным движением была UTCS-1 (Urban Traffic Control System)\cite{UTCS1}. Система UTCS-1 использовала фиксированные сигнальные планы, которые менялись в зависимости от времени суток (утренний, дневной, вечерний планы). Для стабильной работы системы UTCS-1 необходимо  регулярно вручную корректировать сигнальные планы, что является существенным недостатком. На данный момент считается устаревшей, так как более современные системы UTCS-2, UTCS-3, SCOOT позволяют гибко управлять дорожным движением в реальном времени.
 
-Одна из ранних систем управления городским дорожным движением была UTCS-1 (Urban Traffic Control System)\cite{carini1977}. Система UTCS-1 использовала фиксированные сигнальные планы, которые менялись в зависимости от времени суток (утренний, дневной, вечерний планы). Для стабильной работы системы UTCS-1 необходимо  регулярно вручную корректировать сигнальные планы, что является существенным недостатком. На данный момент считается устаревшей, так как более современные системы UTCS-2, UTCS-3, SCOOT позволяют гибко управлять дорожным движением в реальном времени.
+Система SCOOT (Split Cycle Offset Optimization Technique)\cite{SCOOT} анализирует данные о дорожной обстановке и корректирует светофорные сигналы, чтобы предотвратить образование заторов до их появления. Для работы данной системы требуется установка плотной сети индукционных петель, камер и других датчиков движения на расстоянии не менее  сорока метров и не более двухста метров до регулируемых перекрёстков. Централизованное управление SCOOT направлено на устранение <<эффекта волны>>. Однако продолжительность каждого сигнала светофора (Split) не указывает на изменение времени активной фазы в реальном времени.
 
-Система SCOOT (Split Cycle Offset Optimization Technique)\cite{chandler1985} анализирует данные о дорожной обстановке и корректирует светофорные сигналы, чтобы предотвратить образование заторов до их появления. Для работы данной системы требуется установка плотной сети индукционных петель, камер и других датчиков движения на расстоянии не менее  сорока метров и не более двухста метров до регулируемых перекрёстков. Централизованное управление SCOOT направлено на устранение <<эффекта волны>>. Однако продолжительность каждого сигнала светофора (Split) не указывает на изменение времени активной фазы в реальном времени.
+Система OPAC (Optimized Policies for Adaptive Control)\cite{OPAC} "--- это адаптивная система управления светофорами, схожая по назначению с системой SCOOT, но использующая другой подход для оптимизации транспортных потоков. OPAC, разработанная в США, предназначена для улучшения дорожной ситуации в реальном времени путем адаптации фаз светофоров в зависимости от условий трафика. В системе OPAC существует ограничение в восемь фаз для каждого светофора. Это ограничение связано с практическими соображениями, поскольку каждая фаза представляет собой отдельное направление движения или определённую комбинацию разрешённых манёвров на перекрёстке (например, движение прямо, поворот налево или направо). Эти ограничения заложены аппаратно, то есть на уровне контроллеров, и не могут быть изменены конечным пользователем.
 
-Система OPAC (Optimized Policies for Adaptive Control)\cite{gartner1990} "--- это адаптивная система управления светофорами, схожая по назначению с системой SCOOT, но использующая другой подход для оптимизации транспортных потоков. OPAC, разработанная в США, предназначена для улучшения дорожной ситуации в реальном времени путем адаптации фаз светофоров в зависимости от условий трафика. В системе OPAC существует ограничение в восемь фаз для каждого светофора. Это ограничение связано с практическими соображениями, поскольку каждая фаза представляет собой отдельное направление движения или определённую комбинацию разрешённых манёвров на перекрёстке (например, движение прямо, поворот налево или направо). Эти ограничения заложены аппаратно, то есть на уровне контроллеров, и не могут быть изменены конечным пользователем.
+Автоматизированная система управления дорожным движением (АСУДД) <<Микро>> \cite{ASUDD} "--- наиболее широко используемая в России система, успешно применяемая в следующих регионах:  Красноярский край, Иркутская область, Белгородская область, Воронежская область, Хабаровский край, Московская область. АСУДД <<Микро>> является децентрализованной системой и поддерживает до шести GPRS-серверов, которые позволяют подключить до 250 перекрёстков.  Детекторы АСУДД <<Микро>> работают на расстоянии до ста метров. Основным недостатком системы является тот факт, что реализация адаптивных алгоритмов  находится в стадии разработки.
 
-Автоматизированная система управления дорожным движением (АСУДД) <<Микро>> \cite{asudd} "--- наиболее широко используемая в России система, успешно применяемая в следующих регионах:  Красноярский край, Иркутская область, Белгородская область, Воронежская область, Хабаровский край, Московская область. АСУДД <<Микро>> является децентрализованной системой и поддерживает до шести GPRS-серверов, которые позволяют подключить до 250 перекрёстков.  Детекторы АСУДД <<Микро>> работают на расстоянии до ста метров. Основным недостатком системы является тот факт, что реализация адаптивных алгоритмов  находится в стадии разработки.
-
-В работах \cite{el-tantawy2013, tislenko2022a, tislenko2022b} для адаптивного управления светофорными объектами было предложено использовать  метод мультиагентного обучения с подкреплением.  
+В работах \cite{marl2, OMSK, My2, My3} для адаптивного управления светофорными объектами было предложено использовать  метод мультиагентного обучения с подкреплением.
 Данный подход получил название MARLIN (Multiagent Reinforcement Learning for Integrated Network) и  был успешно применен в современной АСУДД в Канаде. Целью обучения с подкреплением является сокращение времени проезда транспортных средств через выбранные участки дорожной сети. Управление светофорными объектами считается эффективным, если транспортные средства находятся на детектируемых участках менее двух циклов.
 Для работы требуется установка камер на расстоянии менее ста метров от стоп-линий. Агенты (светофоры) могут работать без информации о полной дорожной обстановке и управлять движением децентрализованно. Перечисленные особенности можно отнести к достоинствам подхода на основе MARLIN. Существенным ограничением является рост вычислительной сложности при увеличении обзора агента, известный как <<проклятие размерности>>.
 
 % Как альтернатива к применяемым на практике АСУДД, в работе  предложен метод адаптивного управления, использующий  мультиагентное обучение с подкреплением (Multiagent Reinforcement Learning for Integrated Network, MARLIN)\cite{MARL}, основанные на марковских процессах принятия решений, которые могут и не оперировать интенсивностью проезда через поперечное сечение дороги.
 
-
-
 % Во {введении }  дается краткий обзор наиболее известных систем адаптивного управления светофорными объектами. Приводятся особенности реализации.
 
 Структура статьи следующая. В {параграфах  \ref{par:MARL_description}} и \ref{par:MARL_many_description}
-проблема управления 
-светофорными объектами сводится к задаче мультиагентного обучения с подкреплением для одного и нескольких агентов соответственно. 
+проблема управления
+светофорными объектами сводится к задаче мультиагентного обучения с подкреплением для одного и нескольких агентов соответственно.
 \textcolor{red}{дописать текст из файлика в оверлифе}
 
 \section{Общее описание программного комплекса MARLIN24}
 
-
-Фокус наших исследований сосредоточен на   разработке программных и математических инструментов для адаптивного управления сетью светофорных объектов участков дорожной сети города Красноярска. 
-В настоящей работе представлен новый программный комплекс MARLIN24, реализующий часть методов новейших АСУДД. 
-Промежуточные результаты по разработке комплекса и эксперименты приведены  в \cite{}.
+Фокус наших исследований сосредоточен на   разработке программных и математических инструментов для адаптивного управления сетью светофорных объектов участков дорожной сети города Красноярска.
+В настоящей работе представлен новый программный комплекс MARLIN24, реализующий часть методов новейших АСУДД.
+Промежуточные результаты по разработке комплекса и эксперименты приведены  в \cite{OMSK, tislenko2022a,tislenko2022b}.
 % Данная статья является продолжением серии работ авторов ... (подумать)
 % Написание программного комплекса MARLIN24 велось с 2020 по 2024 год.
 % Данная работа является является продолжением публикаций  
@@ -180,20 +176,21 @@ Moscow, student (viktor.sidorov@mipt.ru). }
 % В настоящей работе представлено описание программного комплекса MARLIN24. Данный комплекс реализует особенности новейших АСУДД.
 В статье в качестве примера приведены две модели участков дорожной сети города Красноярска: модель двух перекрестков ( пр.   Свободный--ул. Лесопарковая, пр. Свободный--ул. Годенко) и модель перекрестков микрорайона Покровский.
 % Для исследования представленных в работе моделей были проведены серии вычислительных экспериментов.
-Оценка эффективности применяемого управления и валидация полученных результатов осуществлялись с помощью симуляционных экспериментов на основе статистических данных с оптических детекторов за  2018 и 2019 года. 
+Оценка эффективности применяемого управления и валидация полученных результатов осуществлялись с помощью симуляционных экспериментов на основе статистических данных с оптических детекторов за  2018 и 2019 года.
 
 % Эксперименты проводились на ПК с процессором Intel Core i7-10510U CPU@1.80ГГц и оперативной памятью объемом 8ГБ.
 
-Общая структура  MARLIN24 приведена на рисунке~\ref{fig:structure_MARLIN24}. Комплекс   состоит из четырех модулей:  симуляции,  валидации,  адаптивного управления светофорными объектами, визуализации. 
+Общая структура  MARLIN24 приведена на рисунке~\ref{fig:structure_MARLIN24}.
+Комплекс   состоит из четырех модулей:  симуляции,  валидации,  адаптивного управления светофорными объектами, визуализации.
+Модуль визуализации является опциональным. Его функционал и используемые компоненты будут описаны в остальных модулях.
+
 % \red{опционально отключаемы}
 % \red{посмотреть статьи с приложениями/ перенести в приложения }
 \begin{figure}[tbph]
   \centering
-  \includegraphics[width=0.99\textwidth]{structure.pdf}
+  \includegraphics[width=0.92\textwidth]{structure.pdf}
   \caption{Структура программного комплекса MARLIN24}\label{fig:structure_MARLIN24}
 \end{figure}
-
-
 
 % Часть программного кода, отвечающая за валидацию,  позволяет    моделировать интенсивности движения транспортных потоков. \textcolor{red}{дописать}
 
@@ -205,50 +202,111 @@ Moscow, student (viktor.sidorov@mipt.ru). }
 
 \input{adapt.tex}
 
-
 \input{calc.tex}
-
 
 % \section{Описание задачи для одного агента}
 % \label{par:MARL_description}
-
 
 % Как правило, обучение с подкреплением используется для одного агента в среде, чтобы максимизировать его долгосрочную награду. В работе исследуется модель обучения с подкреплением нескольких агентов (светофорных объектов) в стохастической среде. Обучение с подкреплением сводится к оптимальному сопоставлению агентом действия $a$ состоянию среды $s$. Предложенная математическая модель процесса выбора фазы светофора учитывает текущее расположение светофоров и их загрузку и позволяет сформулировать оптимизационные задачи, целью которых является минимизация задержки движения автомобилей. Отметим, что структура мультиагентной системы обеспечивает наиболее эффективное распараллеливание всей задачи на подзадачи.
 
 % Введём следующие обозначения: $ \state$ --- дискретное пространство состояний, $ \action$ --- дискретное пространство действий агента, $\delta \colon \state\to \action$ --- 
 
-
 \newpage
 % Авторы - по алфавиту, сначала русскоязычные, затем остальные.
 \begin{thebibliography}{10}
-  \bibitem{transp_strat} Транспортная стратегия Российской Федерации, утверждена распоряжением Правительства Российской Федерации от 22 ноября 2008 года №1734-р. [Электронный ресурс]. – Режим доступа: {http://mintrans.gov.ru} (дата обращения: 25.06.2024).
+  \bibitem{transp_strat}
+  Транспортная стратегия Российской
+  Федерации, утверждена распоряжением
+  Правительства Российской Федерации от 22
+  ноября 2008 года №1734-р. --
+  \newblock 2008. --
+  \newblock Дата обращения: 25.06.2024. {
+      http://mintrans.gov.ru}.
 
-  \bibitem{goel2017} S. Goel, S. Bush, C. Gershenson, "Self-Organization in Traffic Lights: Evolution of Signal Control with Advances in Sensors and Communications," University at Albany,  2017, pp. 1708.
+  \bibitem{UTCS1}
+  Carini,~Raymond~N. Application of the UTCS-1 Network Simulation Model to Select
+  Optimal Signal Timings in a Multi-Linear Street System~/ Raymond~N.~Carini~//
+  Interim Report. Publication for Urban Traffic Control System. Joint Highway
+  Research Project. --
+  \newblock 1977. --
+  \newblock P.~164.
 
-  \bibitem{carini1977} R. N. Carini, {Application of the UTCS-1 Network Simulation Model to Select Optimal Signal Timings in a Multi-Linear Street System: Interim Report}, Publication FHWA/IN/JHRP-77/19, Joint Highway Research Project, Indiana Department of Transportation and Purdue University, West Lafayette, 1977.
+  \bibitem{SCOOT}
+  Chandler,~M.J.H. SCOOT and Bus Detection. OTRC Proc. Annual Summer Meeting~/
+  M.J.H.~Chandler~// Traffic Control Studies in London. --
+  \newblock 1990. --
+  \newblock Vol. P269. --
+  \newblock Pp.~111--128.
 
-  \bibitem{chandler1985} M. J. H. Chandler, D. J. Cook, "Traffic Control Studies in London: SCOOT and Bus Detection," OTRC Proc. Annual Summer Meeting, University of Sussex,  pp.111-128, 1985.
+  \bibitem{OPAC}
+  Gartner,~N.H. OPAC: Strategy for Demand-responsive Decentralized Traffic Signal
+  Control~/ N.H.~Gartner~// IFAC Proceedings Volumes. --
+  \newblock 1990. --
+  \newblock Vol.~23. --
+  \newblock Pp.~241--244.
 
-  \bibitem{gartner1990} N. H. Gartner, "OPAC: Strategy for Demand-responsive Decentralized Traffic Signal Control," IFAC Proceedings Volumes, vol. 23, no. 2, pp. 241–244, 1990. 
+  \bibitem{ASUDD}
+  АСУДД <<МИКРО--М>>. --
+  \newblock Дата обращения: 25.06.2024. {
+      http://asud55.ru/archives/1346}.
 
-  \bibitem{asudd} ASUDD "Micro-M," Available: {http://asud55.ru/archives/1346} (accessed: 20.12.2020).
+  \bibitem{marl2}
+  El-Tantawy,~S. Multiagent Reinforcement Learning for Integrated Network of
+  Adaptive Traffic Signal Controllers ({MARLIN-ATSC}): Methodology and
+  Large-Scale Application on Downtown Toronto~/ S.~El-Tantawy, B.~Abdulhai,
+  H.~Abdelgawad~// IEEE Transactions on Intelligent Transportation Systems. --
+  \newblock 2013. --
+  \newblock Vol.~14, no.~3. --
+  \newblock Pp.~1140--1150.
+      
+  \bibitem{IDM}
+  Treiber,~M. Congested traffic states in empirical observations and microscopic
+  simulations~/ M.~Treiber, A.~Hennecke, D.~Helbing~// Transportation Physics
+  Reviews E. --
+  \newblock 2000. --
+  \newblock Vol.~62. --
+  \newblock Pp.~1805--1824.
 
+  \bibitem{MOBIL}
+  Treiber,~M. Realistische Mikrosimulation von Stra?enverkehr mit einem
+  einfachen Modell~/ M.~Treiber, D.~Helbing~// 16. Symposium
+  "Simulationstechnik ASIM 2002" Rostock. --
+  \newblock 2002. --
+  \newblock Pp.~514--520.
 
-  \bibitem{IDM} M. Treiber, A. Hennecke, and D. Helbing, "Congested traffic states in empirical observations and microscopic simulations," {Transportation Physics Reviews E}, vol. 62, pp. 1805–1824, 2000.
+  \bibitem{SHOOT}
+  Зализняк,~\;В.Е. Численные методы. Основы
+  научных вычислений: учебное пособие для
+  бакалавров~/ \;В.Е.~Зализняк. --
+  \newblock ЮРАЙТ, 2012. --
+  \newblock {С.}~356.
 
-  \bibitem{MOBIL} M. Treiber and D. Helbing, "Realistische Mikrosimulation von Stra?enverkehr mit einem einfachen Modell," in {16. Symposium "Simulationstechnik ASIM 2002" Rostock}, 2002, pp. 514–520.
+  \bibitem{osmnx}
+  Boeing, G., {OSMnx: Python for Street Networks}. --
+  \newblock Дата обращения: 25.06.2024. {
+      https://osmnx.readthedocs.io/}.
 
-  \bibitem{networkx} NetworkX Developers, {NetworkX}. [Электронный ресурс]. – 2024. – Режим доступа: {https://networkx.org/} (дата обращения: 25.06.2024).
+  \bibitem{networkx}
+  NetworkX Developers, {NetworkX}. --
+  \newblock Дата обращения: 25.06.2024. {
+      https://networkx.org/}.
 
-  \bibitem{osmnx} Boeing, G., {OSMnx: Python for Street Networks}. [Электронный ресурс]. – 2024. – Режим доступа: {https://osmnx.readthedocs.io/} (дата обращения: 25.06.2024).
-
-
-  
   \bibitem{nelsen2006introduction} Nelsen, R. B., {An Introduction to Copulas}. Springer, 2006. — 270~с.
 
-  \bibitem{marshall1996copulas} Marshall, A., "Copulas, Marginals, and Joint Distributions," {Lecture Notes-Monograph Series. Distributions with Fixed Marginals and Related Topics}, 1996, no.~28, pp.~213--222.
+  \bibitem{COPULAMO}
+  Marshall,~A.W. Families of Multivariate Distributions~/ A.W.~Marshall,
+  I.~Olkin~// Journal of the American Statistical Association. --
+  \newblock 1988. --
+  \newblock Vol.~83, no. 403. --
+  \newblock Pp.~834--841.
 
-  \bibitem{Quesada} Quesada-Molina, J. J., Rodr?guez-Lallena, J. A., "Bivariate copulas with quadratic sections," {Journal of Nonparametric Statistics}, 1995, pp.~323--337.
+  \bibitem{Quesada}
+  Quesada-Molina,~J.J. Bivariate copulas with quadratic sections~/
+  J.J.~Quesada-Molina, J.A.~Rodr?guez-Lallena~// Journal of Nonparametric
+  Statistics. --
+  \newblock 1995. --
+  \newblock Vol.~5, no.~4. --
+  \newblock Pp.~323--337.
 
   \bibitem{Epanechnikov} Epanechnikov, V. A., "Non-Parametric Estimation of a Multivariate Probability Density," {Theory of Probability and Its Applications}, 1969, pp.~153--158.
 
@@ -257,23 +315,46 @@ Moscow, student (viktor.sidorov@mipt.ru). }
   \bibitem{Voitisheck} А.\,В. Войтишек, {Основы метода Монте-Карло: Учебное пособие}, ред. В.\,Н. Задорожный. Новосибирск: НГУ, 2010. — 108~с.
 
 
+  \bibitem{SUTTON}
+  Sutton,~R.S. Reinforcement Learning: An Introduction~/ R.S.~Sutton, A.G.~Barto.
+  --
+  \newblock Cambridge, MA: The MIT Press, 2015. --
+  \newblock Pp.~145--147.
 
-  % \bibitem{shoufeng2008} L. Shoufeng, L. Ximin, and D. Shiqiang, "Q-Learning for adaptive traffic signal control based on delay minimization strategy," in {Proc. IEEE Int. Conf. Netw. Sens. Control}, 2008, pp. 687–691.
+  \bibitem{refarticle24}
+  Zadeh,~L.~A. Fuzzy Sets, Fuzzy Logic, Fuzzy Systems~/ L.~A.~Zadeh. --
+  \newblock World Scientific Press, 1996.
 
-  \bibitem{el-tantawy2013} S. El-Tantawy, B. Abdulhai, H. Abdelgawad, "Multiagent Reinforcement Learning for Integrated Network of Adaptive Traffic Signal Controllers (MARLIN-ATSC): Methodology and Large-Scale Application on Downtown Toronto," {IEEE Transactions on Intelligent Transportation Systems}, vol. 14, no. 3, pp. 1140-1150, 2013.
+  \bibitem{My2}
+  Tislenko,~T.I. Multiagent Reinforcement Learning for Integrated Network: Applying to a Part of
+  the Road Network of Krasnoyarsk City~/ T.I.~Tislenko, D.V.~Semenova,
+  N.A.~Sergeeva et~al.~// IEEE 16th International Conference on Application of
+  Information and Communication Technologies (AICT). --
+  \newblock 2022. --
+  \newblock Pp.~1--5.
 
-  % \bibitem{el-tantawy2010} S. El-Tantawy, B. Abdulhai, "Towards multi-agent reinforcement learning for integrated network of optimal traffic controllers (MARLIN-OTC)," {Transportation Letters: The International Journal of Transportation Research}, vol. 2, pp. 89–110, 2010.
+  \bibitem{My3}
+  Tislenko,~T.I. Modeling and Comparison of Different Management Approaches on
+  the Intersections Network~/ T.I.~Tislenko, D.V.~Semenova, A.A.~Soldatenko~//
+  2023 IEEE 26th International Conference, Distributed Computer and
+  Communication Networks: Control, Computation, Communications (DCCN). --
+  \newblock 2023. --
+  \newblock Pp.~25--29.
 
-  \bibitem{sutton2015} R. S. Sutton, A. G. Barto, {Reinforcement Learning: An Introduction}, 2nd ed., The MIT Press, Cambridge, Massachusetts, 2015, pp. 145–147.
+  \bibitem{OMSK}
+  Тисленко,~Т.И. Моделирование интенсивностей транспортных потоков при помощи копул Маршала-Олкина,~//
+  ИТ. НАУКА. КРЕАТИВ. Т. 5. Системы управления, информационные технологии и математическое моделирование : материалы I Междунар. форума (Омск, 14–16 мая 2024 г.) : в 5 Ч. / науч. ред. П. С. Ложников, отв. ред. И. Г. Ольгина. – Омск : Издательство ОмГТУ, 2024. – 70 с.
 
-  \bibitem{tislenko2021} Т. И. Тисленко, "Задача MARL для светофора на перекрёстке",  Материалы VIII Международной молодежной научной конференции "Математическое и программное обеспечение информационных, технических и экономических систем", 2021, С. 144-149.
-
-  \bibitem{tislenko2022a} Т. И. Тисленко, Д. В. Семенова, "Задача MARL для светофорной сети," in {Информационные технологии и математическое моделирование (ИТММ-2021): Материалы XX Международной конференции имени А.Ф. Терпугова}, Томск, 2022.
-
-  \bibitem{tislenko2022b} Т. И. Тисленко, Д. В. Семенова, Н. А. Сергеева, "Оптимизация планов координаций для светофорных объектов участка дорожной сети," in {Системы управления, информационные технологии и математическое моделирование: материалы IV Всероссийской научно-практической конференции с международным участием}, Омск, 2022, С. 255-261.
-
-
-
+  \bibitem{TOMSK}
+  Тисленко,~Т.И. О двух подходах адаптивного
+  управления светофорными объектами
+  участка дорожной сети г. Красноярска~/
+  Т.И.~Тисленко~// Информационные технологии
+  и математическое моделирование (ИТММ-2024):
+  Материалы XXIII Международной конференции
+  имени А.Ф. Терпугова. --
+  \newblock Карши: ***, 2024. --
+  \newblock {С.}~***--***.
 
 \end{thebibliography}
 
