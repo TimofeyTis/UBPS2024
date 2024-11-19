@@ -15,8 +15,8 @@
 Использование копул Маршал\-ла-Олкина объясняется следующими причинами. Копулы Маршалла–Олкина хорошо описывают случаи, когда срабатывания датчиков связаны так, что интенсивное движение в полосе одного датчика с большой вероятностью вызывают интенсивное движение для  другого. Также копулы этого семейства учитывают влияние редких, но потенциально возможных событий.
 
 
-Пусть случайные величина $X_z$ с функцией распределения $F_z(x)$ описывают временной интервал между проездом двух автомобилей через сечение детектируемого участка в зоне $z.$
-По теореме Скляра \cite{nelsen2006introduction} совместную функцию распределения \((X_1,\dots, X_Z)\) можно представить копулой $C$
+Пусть случайные величина $X_z$ с функцией распределения $F_z(x)$ описывают временной интервал между проездом двух автомобилей через сечение детектируемого участка в зоне $z,$ $z\in Zones, \left\lvert Zones\right\rvert = Z.$
+По теореме Скляра \cite{nelsen2006introduction} совместная функция распределения \((X_1,\dots, X_Z)\) представима копулой $C$
 \begin{equation}\label{eq:Copula_H}
   H_{X_1\dots X_Z}(x_1,\dots, x_Z)=C(F_1(x_1), \dots,F_Z(x_Z).
 \end{equation}
@@ -24,7 +24,7 @@
 
 Далее для описания совместного распределения интенсивностей движения  на детектируемых полосах будем использовать копулу Маршалла-Ол\-ки\-на \cite{COPULAMO, Quesada} с коэффициентами  $ \ 0\leqslant\theta\leqslant 1, $ 
 \begin{equation} \label{eq:copula}
-C(u_1,\dots, u_Z; \overline{\theta}) = \prod_{z=1}^Z u_z^{1-\theta_z} \cdot \min(u_1^{\theta_1}, \dots, u_Z^{\theta_Z}).
+C(u_1,\dots, u_Z; \overline{\theta}) = \prod_{\mathmakebox[2em][l]{z \in Zones}} u_z^{1-\theta_z} \cdot \min(u_1^{\theta_1}, \dots, u_Z^{\theta_Z}).
 \end{equation}
 
 
@@ -75,6 +75,6 @@ C(u_1,\dots, u_Z; \overline{\theta}) = \prod_{z=1}^Z u_z^{1-\theta_z} \cdot \min
 Гистограмма выборки, полученной моделированием копулой Маршалла-Олкина с параметрами \(\alpha=0.9, \beta=0.25\) представлена на рисунке \ref{fig:revive_distrib}.
 \begin{figure}[tbph]
   \centering
-  \includegraphics[width = 0.7\textwidth, trim={6cm 0cm 2cm 0cm}, clip]{EM_revive_density_function.png}
+  \includegraphics[width = 0.65\textwidth, trim={6cm 0cm 2cm 0cm}, clip]{EM_revive_density_function.png}
   \caption{Сравнение эмпирической  $F_{XY}^{*}$  и теоретической $F_{XY}$ функции распределения $(X,Y)$ при моделировании   копулы Маршалла-Олкина с параметрами  $\alpha=0.9, \beta=0.25$ }\label{fig:revive_distrib}
 \end{figure}

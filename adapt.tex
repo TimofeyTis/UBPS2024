@@ -50,9 +50,9 @@ $s_{t+1}=s'$ с вероятностью $p(s' \bigm| s_t, a_t)$ по матрице переходов  $\math
 
 Решение задачи поиска  оптимального совокупного управления светофорными объектами дорожной сети ищется методом динамического программирования согласно принципу оптимальности Вальда---Беллмана. Cправедливо слудующее утверждение\cite{My3}.
 % \begin{proposition1}\label{prep:kropt}
-   В задаче управления фазами светофорного объекта уравнение Вальда---Беллмана имеет вид
+В задаче управления фазами светофорного объекта уравнение Вальда---Беллмана имеет вид
   {
-  \abovedisplayskip=-0.0em
+  \abovedisplayskip=0.5em
   \belowdisplayskip=0em
   \begin{equation}\label{BELMAN}
     V^* = \max_{a \in \action} \sum_{s'\in \state} p(s'\bigm|s, a)(r(s, a)+\gamma V^*(s')).
@@ -63,14 +63,14 @@ $s_{t+1}=s'$ с вероятностью $p(s' \bigm| s_t, a_t)$ по матрице переходов  $\math
 Формула (\ref{BELMAN}) может быть переписана в итерационной записи, называемой $Q$-обучение.
 Функция суммарных вознаграждений при оптимальном управлении на шаге $t$ имеет вид
 {\abovedisplayskip=0.5em
-\belowdisplayskip=0.0em
+\belowdisplayskip=0em
 \[
   V^*\left(\{s_{t'}, \delta \}_{t'\in \mathbb{N},\;t'\leqslant t}\right)=\max\limits_{a\in{\cal \action}} Q_t(s_t, a),
 \]}
 
 Считаем, что нам известно состояние среды $s_{t+1}$ и оптимальное управление $a_{t+1} $ на шаге $t+1,$ соответствующий итерации ${l},$ и условимся, что итерация $Q$ идет по индексу $l$, тогда
 функция $Q$ для агента имеет рекурсивную запись 
-\abovedisplayskip=0.5em
+\abovedisplayskip=0em
 \belowdisplayskip=0.0em
 \begin{equation*}
   \begin{split}
@@ -84,19 +84,19 @@ $s_{t+1}=s'$ с вероятностью $p(s' \bigm| s_t, a_t)$ по матрице переходов  $\math
 Решение задачи поиска  оптимального совокупного управления светофорными объектами дорожной сети ищется, чтобы увеличить максимальное совокупное вознаграждение, определяемое функцией $Q.$ 
 Справедливо следующее утверждение \cite{My3}.
 % \begin{proposition1}\label{prep:search}
-   Для задачи поиска оптимального управления светофорным объектом с любым количеством фаз
+   Для задачи поиска оптимального управления светофорным объектом
   % \begin{equation}%\label{VALUE}
   %V(s) = \mathbb{E}\sum_{t=0}^{\infty}\gamma^t r(s_t,\delta(s_t)) \rightarrow\max\limits_\delta, s_0 = s
   % \end{equation}
-  \begin{itemize}[itemsep=-3pt]
+  \begin{itemize}[itemsep=-3pt,topsep=0pt]
     \item существует единственное точное решение;
-    \item оценка точности приближенного  решения на $n$-ом шаге итерации
+    \item оценка точности приближенного  решения на $n$-ом шаге 
           {
           \belowdisplayskip=0em
           $$
             \rho(Q_n, Q_0) \leqslant \frac{\gamma ^n \rho(Q_1, Q_0)}{ 1 - \gamma},
           $$}
-          \noindent 
+          \noindent
           где $Q_l \in \mathbb{R} _{\infty}^{| \action|+| \state|}$ --- вектора значений $Q(s, a)$ на шаге $l$,\\
           $\forall q,w \in \mathbb{R} _{\infty}^{| \action|+| \state|}$   расстояние 
           $\rho(q, w) = \max\limits_{ {\scriptstyle j\in \mathbb{N}, \rule{0em}{.9em}}\;{\mathmakebox[1em][l]{\scriptstyle j\leqslant {\left|\action\right|+\left|\state\right|}} }}\left| {q}_j - {w}_j\right|;$ % --- метрика пространства  $\mathbb{R} _{\infty}^{| \action|+| \state|}$, определенная для $\forall q,w \in \mathbb{R} _{\infty}^{| \action|+| \state|};$
