@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.9)  18 NOV 2024 07:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.9)  19 NOV 2024 13:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -665,12 +665,6 @@ LaTeX Font Warning: Font shape `T2A/far/b/it' in size <10.95> not available
 (Font)              Font shape `T2A/far/bx/it' tried instead on input line 166.
 
 
-LaTeX Warning: Citation `tislenko2022a' on page 4 undefined on input line 170.
-
-
-LaTeX Warning: Citation `tislenko2022b' on page 4 undefined on input line 170.
-
-
 
 [4]
 <structure.pdf, id=28, 690.75264pt x 441.96014pt>
@@ -693,20 +687,22 @@ Package pdftex.def Info: sim_descr.pdf  used on input line 20.
 (pdftex.def)             Requested size: 199.73645pt x 70.90445pt.
 
 
-[6 <./sim_descr.pdf>]
+[6]
 
 
 Overfull \hbox (60.45444pt too wide) has occurred while \output is active
  \T2A/ftm/m/it/10.95 Программы и системы моделирования объектов, средств и систем управления
  []
 
-[7]
+[7 <./sim_descr.pdf>]
 <mobil.pdf, id=105, 374.3596pt x 117.05632pt>
 File: mobil.pdf Graphic file (type pdf)
 <use mobil.pdf>
 Package pdftex.def Info: mobil.pdf  used on input line 81.
 (pdftex.def)             Requested size: 153.64487pt x 48.04341pt.
 
+
+[8 <./mobil.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 98--99
 []\T2A/ftm/m/n/10.95 движение дру-гих
  []
@@ -716,9 +712,7 @@ Underfull \hbox (badness 2359) in paragraph at lines 99--100
 []\T2A/ftm/m/n/10.95 водитель транс-порт-но-го
  []
 
-
-
-[8 <./mobil.pdf>]) (./validation.tex
+) (./validation.tex
 
 
 Overfull \hbox (60.45444pt too wide) has occurred while \output is active
@@ -727,13 +721,15 @@ Overfull \hbox (60.45444pt too wide) has occurred while \output is active
 
 [9]
 
+[10]
+
 pdfTeX warning: pdflatex.exe (file ./model_ex.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<model_ex.pdf, id=133, 1056.10564pt x 534.43665pt>
+<model_ex.pdf, id=137, 1056.10564pt x 534.43665pt>
 File: model_ex.pdf Graphic file (type pdf)
 <use model_ex.pdf>
 Package pdftex.def Info: model_ex.pdf  used on input line 48.
 (pdftex.def)             Requested size: 147.49776pt x 74.63306pt.
-<SV-LESOP_12.jpg, id=134, 266.49562pt x 149.8097pt>
+<SV-LESOP_12.jpg, id=138, 266.49562pt x 149.8097pt>
 File: SV-LESOP_12.jpg Graphic file (type jpg)
 <use SV-LESOP_12.jpg>
 Package pdftex.def Info: SV-LESOP_12.jpg  used on input line 48.
@@ -743,9 +739,6 @@ Overfull \hbox (2.99924pt too wide) in paragraph at lines 48--49
  [] 
  []
 
-
-
-[10]
 <EM_yad_oc_dens1.png, id=139, 557.08125pt x 278.03876pt>
 File: EM_yad_oc_dens1.png Graphic file (type png)
 <use EM_yad_oc_dens1.png>
@@ -756,19 +749,20 @@ File: EM_yad_oc_dens2.png Graphic file (type png)
 <use EM_yad_oc_dens2.png>
 Package pdftex.def Info: EM_yad_oc_dens2.png  used on input line 71.
 (pdftex.def)             Requested size: 122.91402pt x 61.34265pt.
-<EM_revive_density_function.png, id=142, 836.12375pt x 557.08125pt>
-File: EM_revive_density_function.png Graphic file (type png)
-<use EM_revive_density_function.png>
-Package pdftex.def Info: EM_revive_density_function.png  used on input line 78.
-(pdftex.def)             Requested size: 215.10188pt x 196.91943pt.
-)
+
 
 
 Overfull \hbox (60.45444pt too wide) has occurred while \output is active
  \T2A/ftm/m/it/10.95 Программы и системы моделирования объектов, средств и систем управления
  []
 
-[11 <./model_ex.pdf> <./SV-LESOP_12.jpg> <./EM_yad_oc_dens1.png> <./EM_yad_oc_dens2.png>] (./adapt.tex
+[11 <./model_ex.pdf> <./SV-LESOP_12.jpg>]
+<EM_revive_density_function.png, id=155, 836.12375pt x 557.08125pt>
+File: EM_revive_density_function.png Graphic file (type png)
+<use EM_revive_density_function.png>
+Package pdftex.def Info: EM_revive_density_function.png  used on input line 78.
+(pdftex.def)             Requested size: 215.10188pt x 196.91943pt.
+) (./adapt.tex
 Underfull \hbox (badness 1043) in paragraph at lines 5--7
 []\T2A/ftm/m/n/10.95 Опишем за-да-чу управ-ле-ния све-то-фор-ным объ-ек-том как
  []
@@ -790,12 +784,7 @@ Underfull \hbox (badness 1776) in paragraph at lines 5--7
 
 
 
-[12 <./EM_revive_density_function.png>]
-Overfull \hbox (9.12785pt too wide) in paragraph at lines 36--50
-[] 
- []
-
-
+[12 <./EM_yad_oc_dens1.png> <./EM_yad_oc_dens2.png> <./EM_revive_density_function.png>]
 
 
 Overfull \hbox (60.45444pt too wide) has occurred while \output is active
@@ -803,6 +792,13 @@ Overfull \hbox (60.45444pt too wide) has occurred while \output is active
  []
 
 [13]
+Overfull \hbox (9.12785pt too wide) in paragraph at lines 36--50
+[] 
+ []
+
+
+
+[14]
 LaTeX Font Info:    Trying to load font information for TS1+ftm on input line 92.
 LaTeX Font Info:    No file TS1ftm.fd. on input line 92.
 
@@ -811,10 +807,7 @@ LaTeX Font Warning: Font shape `TS1/ftm/m/n' undefined
 (Font)              using `TS1/cmr/m/n' instead
 (Font)              for symbol `textbullet' on input line 92.
 
-
-
-[14{c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-<mod_scheme.pdf, id=174, 351.20007pt x 252.23134pt>
+<mod_scheme.pdf, id=173, 351.20007pt x 252.23134pt>
 File: mod_scheme.pdf Graphic file (type pdf)
 <use mod_scheme.pdf>
 Package pdftex.def Info: mod_scheme.pdf  used on input line 132.
@@ -831,7 +824,9 @@ Overfull \hbox (60.45444pt too wide) has occurred while \output is active
  \T2A/ftm/m/it/10.95 Программы и системы моделирования объектов, средств и систем управления
  []
 
-[15 <./mod_scheme.pdf>]
+[15{c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+
+[16 <./mod_scheme.pdf>]
 Overfull \hbox (2.28928pt too wide) detected at line 156
 []
  []
@@ -841,12 +836,7 @@ Overfull \hbox (2.28928pt too wide) in alignment at lines 155--156
 [] [] 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 ) (./calc.tex
-
-[16]
 
 
 Overfull \hbox (60.45444pt too wide) has occurred while \output is active
@@ -854,14 +844,14 @@ Overfull \hbox (60.45444pt too wide) has occurred while \output is active
  []
 
 [17]
-<learningcurve40.png, id=210, 1011.78pt x 289.08pt>
+
+[18]
+<learningcurve40.png, id=213, 1011.78pt x 289.08pt>
 File: learningcurve40.png Graphic file (type png)
 <use learningcurve40.png>
 Package pdftex.def Info: learningcurve40.png  used on input line 52.
 (pdftex.def)             Requested size: 304.21854pt x 86.91875pt.
 
-
-[18]
 
 
 Overfull \hbox (60.45444pt too wide) has occurred while \output is active
@@ -979,7 +969,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  71i,23n,79p,1618b,334s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/texmf-local/fonts/type1/public/pscyr/arial.pfb><c:/texlive/texmf-local/fonts/type1/public/pscyr/arialbd.pfb><c:/texlive/texmf-local/fonts/type1/public/pscyr/arialbi.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><c:/texlive/texmf-local/fonts/type1/public/pscyr/times.pfb><c:/texlive/texmf-local/fonts/type1/public/pscyr/times.pfb><c:/texlive/texmf-local/fonts/type1/public/pscyr/timesbd.pfb><c:/texlive/texmf-local/fonts/type1/public/pscyr/timesi.pfb>
-Output written on overleaf-copy.pdf (24 pages, 1323287 bytes).
+Output written on overleaf-copy.pdf (24 pages, 1323426 bytes).
 PDF statistics:
  301 PDF objects out of 1000 (max. 8388607)
  202 compressed objects within 3 object streams
