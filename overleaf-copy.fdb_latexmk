@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1732177706.81904 "c:/Users/Stationary_PC/Documents/tex/UBPS2024/overleaf-copy.tex" "overleaf-copy.pdf" "overleaf-copy" 1732177708.62252 0
+["pdflatex"] 1732177873.65687 "c:/Users/Stationary_PC/Documents/tex/UBPS2024/overleaf-copy.tex" "overleaf-copy.pdf" "overleaf-copy" 1732177875.30647 0
   "108-170.sty" 1202126256 363 70335675bf8a3640e89de56a38bce7a3 ""
   "EM_revive_density_function.png" 1731888693 148347 61d7a467e42d7ea51b70bbbbdb7b7de4 ""
   "EM_yad_oc_dens1.png" 1731887035 24974 c7253361a001451f219a22956481cb68 ""
@@ -7,7 +7,7 @@
   "SV-LESOP_12.jpg" 1718618212 30102 72f4a0e356b6886de0d4a505f5460dbc ""
   "adapt.tex" 1731998437 11913 8a90f346b6be92c846b0bb1bb3445ba7 ""
   "c:/Users/Stationary_PC/.texlive2024/texmf-var/fonts/tfm/lh/lh-t2a/larm1095.tfm" 1723204457 3264 ead613d557baebcc53cf028c9c92d927 ""
-  "c:/Users/Stationary_PC/Documents/tex/UBPS2024/overleaf-copy.tex" 1732176228 25818 3c08643bc56c98cd1e4b2d30e8980899 ""
+  "c:/Users/Stationary_PC/Documents/tex/UBPS2024/overleaf-copy.tex" 1732177743 25818 3c08643bc56c98cd1e4b2d30e8980899 ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1723187157 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2024/texmf-dist/fonts/enc/t2/t2a.enc" 1723196619 3048 bca399e5c4835dee88e40c9216089119 ""
   "c:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1723189135 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -145,14 +145,14 @@
   "mod_scheme.pdf" 1731253451 62921 35145131ec04b7b8f357851daf988e8f ""
   "model_ex.pdf" 1697118922 175917 f6012bd895471878bdc20542d2dd1b49 ""
   "myruss.sty" 1731241516 16816 b251d6001b1eedc2d89e7f7735bf28df ""
-  "overleaf-copy.aux" 1732177708 14923 20ea569a07287d15581b13df8fc40f6c "pdflatex"
-  "overleaf-copy.tex" 1732176228 25818 3c08643bc56c98cd1e4b2d30e8980899 ""
+  "overleaf-copy.aux" 1732177875 14923 01bdbd8e99a3939f3df38693e9f609ea "pdflatex"
+  "overleaf-copy.tex" 1732177743 25818 3c08643bc56c98cd1e4b2d30e8980899 ""
   "ruslist.sty" 1119028390 6268 17df0ea97a59b9c56e8cd686f0e0f81c ""
   "sim_descr.pdf" 1731238946 51258 93c30b2fb9aa23ce6900237693afda31 ""
   "simulation.tex" 1732176472 11822 eaf60e3388749ffd0c2a7a0723bd0473 ""
   "structure.pdf" 1731252671 55144 948ae238d443d16757021306bc547036 ""
   "ubs.cls" 1537370560 12951 c8218d38d932aa15c7d5b826f9dfe9ab ""
-  "validation.tex" 1732177704 6579 73de61ba2a98bded0990aa33abef4ed7 ""
+  "validation.tex" 1732177871 6585 126315ed1292a5c18cad472433ff64a2 ""
   (generated)
   "overleaf-copy.aux"
   "overleaf-copy.log"
