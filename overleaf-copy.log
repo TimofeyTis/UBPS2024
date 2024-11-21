@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.9)  21 NOV 2024 15:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.9)  21 NOV 2024 15:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -725,15 +725,15 @@ pdfTeX warning: pdflatex.exe (file ./model_ex.pdf): PDF inclusion: found PDF ver
 <model_ex.pdf, id=133, 1056.10564pt x 534.43665pt>
 File: model_ex.pdf Graphic file (type pdf)
 <use model_ex.pdf>
-Package pdftex.def Info: model_ex.pdf  used on input line 51.
+Package pdftex.def Info: model_ex.pdf  used on input line 56.
 (pdftex.def)             Requested size: 147.49776pt x 74.63306pt.
 <SV-LESOP_12.jpg, id=134, 266.49562pt x 149.8097pt>
 File: SV-LESOP_12.jpg Graphic file (type jpg)
 <use SV-LESOP_12.jpg>
-Package pdftex.def Info: SV-LESOP_12.jpg  used on input line 51.
+Package pdftex.def Info: SV-LESOP_12.jpg  used on input line 56.
 (pdftex.def)             Requested size: 135.20824pt x 76.00874pt.
 
-Overfull \hbox (2.99924pt too wide) in paragraph at lines 51--52
+Overfull \hbox (2.99924pt too wide) in paragraph at lines 56--57
  [] 
  []
 
@@ -743,17 +743,17 @@ Overfull \hbox (2.99924pt too wide) in paragraph at lines 51--52
 <EM_yad_oc_dens1.png, id=139, 557.08125pt x 278.03876pt>
 File: EM_yad_oc_dens1.png Graphic file (type png)
 <use EM_yad_oc_dens1.png>
-Package pdftex.def Info: EM_yad_oc_dens1.png  used on input line 73.
+Package pdftex.def Info: EM_yad_oc_dens1.png  used on input line 78.
 (pdftex.def)             Requested size: 122.91402pt x 61.34265pt.
 <EM_yad_oc_dens2.png, id=141, 557.08125pt x 278.03876pt>
 File: EM_yad_oc_dens2.png Graphic file (type png)
 <use EM_yad_oc_dens2.png>
-Package pdftex.def Info: EM_yad_oc_dens2.png  used on input line 74.
+Package pdftex.def Info: EM_yad_oc_dens2.png  used on input line 79.
 (pdftex.def)             Requested size: 122.91402pt x 61.34265pt.
 <EM_revive_density_function.png, id=142, 836.12375pt x 557.08125pt>
 File: EM_revive_density_function.png Graphic file (type png)
 <use EM_revive_density_function.png>
-Package pdftex.def Info: EM_revive_density_function.png  used on input line 81.
+Package pdftex.def Info: EM_revive_density_function.png  used on input line 86.
 (pdftex.def)             Requested size: 199.73645pt x 182.85133pt.
 ) (./adapt.tex
 Underfull \hbox (badness 1043) in paragraph at lines 5--7
@@ -969,7 +969,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  71i,23n,79p,1618b,334s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/texmf-local/fonts/type1/public/pscyr/arial.pfb><c:/texlive/texmf-local/fonts/type1/public/pscyr/arialbd.pfb><c:/texlive/texmf-local/fonts/type1/public/pscyr/arialbi.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><c:/texlive/texmf-local/fonts/type1/public/pscyr/times.pfb><c:/texlive/texmf-local/fonts/type1/public/pscyr/times.pfb><c:/texlive/texmf-local/fonts/type1/public/pscyr/timesbd.pfb><c:/texlive/texmf-local/fonts/type1/public/pscyr/timesi.pfb>
-Output written on overleaf-copy.pdf (24 pages, 1331451 bytes).
+Output written on overleaf-copy.pdf (24 pages, 1331462 bytes).
 PDF statistics:
  305 PDF objects out of 1000 (max. 8388607)
  205 compressed objects within 3 object streams
