@@ -24,21 +24,25 @@
   H_{X_1\dots X_Z}(x_1,\dots, x_Z)=C(F_1(x_1), \dots,F_Z(x_Z).
 \end{equation}
 \noindent
-Для описания совместного распределения временных интервалов проезда автомобилей будем использовать копулы  Маршал\-ла-Олкина \cite{nelsen2006introduction, COPULAMO} при $0\leqslant\theta_z\leqslant 1,  \widetilde{z} = \argmin\limits_{z \in Zones}(u_1^{-\theta_1}, \dots, u_Z^{-\theta_Z})$
+Для описания совместного распределения временных интервалов проезда автомобилей будем использовать копулы  Маршал\-ла-Олкина \cite{nelsen2006introduction, COPULAMO} при $0\leqslant\theta_z\leqslant 1,  \widetilde{z} = \argmin(u_1^{-\theta_1}, \dots, u_Z^{-\theta_Z})$
 \abovedisplayskip=0.2em
 \begin{equation} \label{eq:copula}
-C(u_1,\dots, u_Z; \overline{\theta}) = \prod_{\mathmakebox[2em][l]{z \in Zones}} u_z \cdot u_{\widetilde{z}}^{-\theta_{\widetilde{z}}}.
+C(u_1,\dots, u_Z; \overline{\theta}) =   u_{\widetilde{z}}^{-\theta_{\widetilde{z}}} \prod_{\mathmakebox[2em][l]{z \in Zones}} u_z.
 \end{equation}
 \noindent
 Тогда совместная плотность $h(x_1,\dots, x_Z)$ при $u_z = F_z(x_z)$ выражается через копулу (\ref{eq:copula}) по формуле (\ref{eq:Copula_H}) следующим образом 
-\begin{equation*} 
-  \begin{split}
-    h(x_1,\dots, x_Z) &= \frac{\partial^Z H}{\partial x_1\dots\partial x_Z} = \frac{\partial^Z C}{\partial u_1\dots\partial u_Z} \cdot \prod_{\mathmakebox[2em][l]{z \in Zones}} \frac{d F_z (x_z)}{d x_z} =\\
-    &= (1-\theta_{\widetilde{z}} ) u_{\widetilde{z}}^{-\theta_{\widetilde{z}}} \cdot \prod_{\mathmakebox[2em][l]{z \in Zones}} f_{z}(x_z).
-  \end{split}
-\end{equation*}
-\abovedisplayskip = 0em
+{\abovedisplayskip = 0.5em
 \belowdisplayskip = 0em
+\begin{equation} 
+  \begin{split}
+    h(x_1,\dots, x_Z) &= \frac{\partial^Z H}{\partial x_1\dots\partial x_Z} = \frac{\partial^Z C}{\partial u_1\dots\partial u_Z}  \prod_{\mathmakebox[2em][l]{z \in Zones}} \frac{d F_z (x_z)}{d x_z} =\\
+    &= (1-\theta_{\widetilde{z}} ) u_{\widetilde{z}}^{-\theta_{\widetilde{z}}}\prod_{\mathmakebox[2em][l]{z \in Zones}} f_{z}(x_z).
+  \end{split}
+  \label{eq:new_density}
+\end{equation}
+}
+\noindent
+
 
 % Далее для описания совместного распределения интенсивностей движения  на детектируемых полосах будем использовать копулу Маршалла-Ол\-ки\-на \cite{COPULAMO, Quesada} с коэффициентами  $ \ 0\leqslant\theta\leqslant 1, $ 
 % {
@@ -63,13 +67,14 @@ C(u_1,\dots, u_Z; \overline{\theta}) = \prod_{\mathmakebox[2em][l]{z \in Zones}}
 Скриншот графического интерфейса MARLIN24 изображен на рисунке~\ref{fig:ex3}а, зоны работы оптических датчиков --- на  рисунке~\ref{fig:ex3}б.
 \begin{figure}[tbph]
     \centering
-    \scalebox{1}{
-        а)\includegraphics[width = 0.4\textwidth]{model_ex.pdf}
-        б)\includegraphics[width = 0.4\textwidth]{SV-LESOP_12.jpg}
+    \scalebox{0.9}{
+        а)\includegraphics[width = 0.46\textwidth]{model_ex.pdf}
+        б)\includegraphics[width = 0.42\textwidth]{SV-LESOP_12.jpg}
     }
     \caption{а)скриншот окна комплекса  MARLIN24; \linebreak б)зоны оптических датчиков (жёлтый цвет) }
     \label{fig:ex3}
 \end{figure}
+\newpage
 
 Этап предобработки состоит в оценивании плотности распределений случайных величин $X$ и $Y,$ описывающих число детектируемых транспортных средств на полосах 1 и 2 соответственно на основе данных, полученных с оптических детекторов города Красноярска с 2019 по 2020 год. 
 На первом шаге строятся ядерные оценки плотности с ядром Епанечникова \cite{Epanechnikov}. Далее формулируется упрощающее предположение о том, что каждая из рассматриваемых случайных величин представима в виде смеси нормальных распределений. 
@@ -85,23 +90,25 @@ C(u_1,\dots, u_Z; \overline{\theta}) = \prod_{\mathmakebox[2em][l]{z \in Zones}}
 Результаты  этапа предобработки  на 10-й итерации EM алгоритма и вид маргинальных плотностей  распределений случайных величин $X$  и $Y$ приведены на рисунке~\ref{fig:margin}а) и рисунке \ref{fig:margin}б).
 \begin{figure}[tbph]
   \centering
-  а)\includegraphics[width = 0.4\textwidth]{EM_yad_oc_dens1.png}
-  б)\includegraphics[width = 0.4\textwidth]{EM_yad_oc_dens2.png}
+  а)\includegraphics[width = 0.46\textwidth]{EM_yad_oc_dens1.png}
+  б)\includegraphics[width = 0.46\textwidth]{EM_yad_oc_dens2.png}
   \caption{Результаты этапа предобработки: оценка плотностей маргинальных плотностей: а) $X$; б) $Y$}\label{fig:margin}
 \end{figure}
 
 
 Для этапа имитационного моделирования  среднесуточных интенсивностей была разработана модификация метода дискретной суперпозиции Монте-Карло для  генерации  значений случайной величины $(X,Y)$ \cite{Voitisheck, TOMSK}.
-Гистограмма выборки, полученной моделированием копулой Маршалла-Олкина с параметрами \(\theta_1=0.9, \theta_2=0.25\) представлена на рисунке \ref{fig:revive_distrib}.
-Сравнение значений выборки с моделируемыми приведено на рисунке\ref{fig:scatterplot}.
+
+Гистограмма выборки, полученной моделированием копулой Маршалла-Олкина с параметрами  $\overline{\theta}=(\frac{9}{10},\frac{1}{4})$  и функция плотности распределения (\ref{eq:new_density}) представлены на рисунке \ref{fig:revive_distrib}.
 \begin{figure}[tbph]
   \centering
   \includegraphics[width = 0.65\textwidth, trim={2cm 1.5cm 0.5cm 1.3cm}, clip]{EM_revive_density_function.png}
-  \caption{Сравнение эмпирической  $f_{XY}^{*}$ с параметрами  $\theta_1=0.9, \theta_2=0.25$  и теоретической $f_{XY}$ функции плотности   }\label{fig:revive_distrib}
+  \caption{Сравнение эмпирической  $h_{XY}^{*}$ с параметрами  $\overline{\theta}=(\frac{9}{10},\frac{1}{4})$  и теоретической $h_{XY}$ функции плотности с.в. $(X,Y)$}\label{fig:revive_distrib}
 \end{figure}
+
+Сравнение значений выборки с моделируемыми значениями $(X,Y)$ приведено на рисунке \ref{fig:scatterplot}.
 \begin{figure}[tbph]
   \centering
-      \includegraphics[width = 0.63\textwidth]{scatterplot.png}
+      \includegraphics[width = 0.63\textwidth, trim={0.2cm 0.2cm 1cm 1cm}, clip]{scatterplot.png}
   \caption{Сравнение  моделируемых значений и выборки $(X,Y)$ }
   \label{fig:scatterplot}
 \end{figure}
