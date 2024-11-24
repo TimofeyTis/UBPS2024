@@ -43,12 +43,12 @@
 %    Программы и системы моделирования объектов, средств и систем управления
 
 % В соответствии с требованиями ВАК коды УДК и ББК обязательны. Проставляются автором. Могут быть скорректированы редактором
-\udk{УДК ...} % Коды УДК можно найти на сайте https://classinform.ru/udk.html
-\bbk{ББК ...} % Коды ББК можно найти на сайте https://classinform.ru/bbk.html
+\udk{УДК 519.1,519.2,519.6,519.8(075), 004.42, 519.85} % Коды УДК можно найти на сайте https://classinform.ru/udk.html
+\bbk{ББК 221.7} % Коды ББК можно найти на сайте https://classinform.ru/bbk.html
 %221.7
 
 \title{Разработка адаптивной системы управления светофорными объектами с использованием марковских процессов принятия решений}% Название статьи
-\engtitle{Article Title} % В соответствии с требованиями ВАК обязательно указывается название статьи на английском языке.
+\engtitle{Development of an Adaptive Traffic Light Control System Using Markov Decision Processes} % В соответствии с требованиями ВАК обязательно указывается название статьи на английском языке.
 
 % Ссылка на грант и прочие благодарности. Оставьте команду \footnote и просто измените ее аргумент.
 % Если ссылка не нужна, просто удалите следующую строку.
@@ -71,14 +71,12 @@
 %
 }
 %
-\engauthors{% % В соответствии с требованиями ВАК обязательно указывается информация об авторах на английском языке.
-\textbf{Alexander Ivanov}, Institute of Control Sciences of RAS,
-Moscow, Cand.Sc., assistant professor (aaivanov@mail.ru). \\
-\textbf{Boris Petrov}, Institute of Control Sciences of RAS, Moscow,
-Doctor of Science, professor (Moscow, Profsoyuznaya st., 65,
-(495)000-00-00). \\
-\textbf{Vikor Sidorov}, Moscow Institute of Physics and Technology,
-Moscow, student (viktor.sidorov@mipt.ru). }
+
+% % В соответствии с требованиями ВАК обязательно указывается информация об авторах на английском языке.
+\engauthors{
+\textbf{Timofey I. Tislenko}, Siberian Federal University, Krasnoyarsk, postgraduate student (timtisko@mail.ru). \\
+\textbf{Darya V. Semenova}, Siberian Federal University, Krasnoyarsk, Cand.Sc. (Physics and Mathematics), assistant professor (DVSemenova@sfu-kras.ru). 
+}
 
 \abstract{
 В статье представлены результаты разработки программного комплекса MARLIN24, предназначенного для адаптивного управления светофорными \linebreak объектами. 
@@ -93,7 +91,7 @@ Moscow, student (viktor.sidorov@mipt.ru). }
 % Объем расширенной английской аннотации -- 150-200 слов.
 % Английский текст проверяется редактором на предмет грамотности и соответствия русскому тексту и может быть изменен без согласования с авторами статьи.
 \engabstract{%
-% 150--200 words. Describes the standards of articles' formatting for "Large systems control" papers collection. Provides the examples for typical elements of an article. 150--200 words. Describes the standards of articles' formatting for "Large systems control" papers collection. Provides the examples for typical elements of an article. 150--200 words. Describes the standards of articles' formatting for "Large systems control" papers collection. Provides the examples for typical elements of an article. 150--200 words. Describes the standards of articles' formatting for "Large systems control" papers collection. Provides the examples for typical elements of an article.\newpage
+The paper presents the results of developing the MARLIN24 software  for adaptive traffic light control. The structure of the package includes a module for adaptive traffic light control, a traffic simulation module, and a validation module. The mathematical model of the traffic light control process is described using a Markov decision process with a finite number of actions and states. The task is to find the effective control that reduces the total time vehicles spend at the observed sections of the road network. We formulate the task as a multi-agent reinforcement learning problem (Multiagent Reinforcement Learning for Integrated Network, MARLIN). A $Q$-learning algorithm was developed to solve the MARLIN problem. The structure of the software package also includes a micro-simulation module for traffic flows. This module uses the "Intelligent Driver Model" (IDM). The validation module uses multivariate distributions to simulate real-time traffic data obtained from an optical sensors. The multivariate distributions are constructed by applying Marshall–Olkin copulas to marginal empirical distributions of timestamps for optical sensor triggers. Marginal distributions were constructed based on traffic intensity data for sections of the road network from 2019 to 2020.
 }
 
 % Обязательно указывается от трёх до шести ключевых слов
@@ -102,7 +100,7 @@ Moscow, student (viktor.sidorov@mipt.ru). }
 
 % В соответствии с требованиями ВАК обязательно приводится перевод ключевых слов на английский язык.
 \engkeywords{
-  % large systems control, electronic scientific publication, article formatting template
+  traffic flow simulation, IDM model, MOBIL model, Marshall-Olkin copulas, reinforcement learning
 }
 
 \presented{...}% Член редколлегии, представляющий статью к публикации, заполняется редактором
