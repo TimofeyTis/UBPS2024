@@ -17,7 +17,7 @@
 % Следовательно, для многополосной дороги следует рассматривать систему зависимых случайных величин.  
 
 Пусть случайная величина $X_z$ с функцией распределения $F_z(x)$ есть временной интервал между проездом двух автомобилей через сечение детектируемого участка в зоне $z, z\in Zones.$
-Тогда система зависимых случайных величин \((X_1,\dots, X_Z)\) с совместной функцией распределения $H(x_1\dots x_Z)$ описывает интенсивность движения транспортных потоков через детектируемый участок $Zones.$
+Тогда система зависимых случайных величин \((X_1,\dots, X_Z)\) с совместной функцией распределения $H(x_1\dots x_Z)$ описывает интенсивность движения транспортных потоков через детектируемый участок дорожной сети $Zones.$
 
 По теореме Скляра \cite{nelsen2006introduction} совместная функция распределения  представима копулой $C$
 \begin{equation}\label{eq:Copula_H}
@@ -25,14 +25,11 @@
 \end{equation}
 \noindent
 Для описания совместного распределения временных интервалов проезда автомобилей будем использовать копулы  Маршал\-ла-Олкина \cite{nelsen2006introduction, COPULAMO} при $0\leqslant\theta_z\leqslant 1,  \widetilde{z} = \argmin(u_1^{-\theta_1}, \dots, u_Z^{-\theta_Z})$
-\abovedisplayskip=0.2em
 \begin{equation} \label{eq:copula}
 C(u_1,\dots, u_Z; \overline{\theta}) =   u_{\widetilde{z}}^{-\theta_{\widetilde{z}}} \prod_{\mathmakebox[2em][l]{z \in Zones}} u_z.
 \end{equation}
 \noindent
 Тогда совместная плотность $h(x_1,\dots, x_Z)$ при $u_z = F_z(x_z)$ выражается через копулу (\ref{eq:copula}) по формуле (\ref{eq:Copula_H}) следующим образом 
-{\abovedisplayskip = 0.5em
-\belowdisplayskip = 0em
 \begin{equation} 
   % \begin{split}
     h(x_1,\dots, x_Z) % &= \frac{\partial^Z H}{\partial x_1\dots\partial x_Z} = \frac{\partial^Z C}{\partial u_1\dots\partial u_Z}  \prod_{\mathmakebox[2em][l]{z \in Zones}} \frac{d F_z (x_z)}{d x_z} =\\
@@ -40,7 +37,6 @@ C(u_1,\dots, u_Z; \overline{\theta}) =   u_{\widetilde{z}}^{-\theta_{\widetilde{
   % \end{split}
   \label{eq:new_density}
 \end{equation}
-}
 \noindent
 
 
@@ -101,7 +97,7 @@ C(u_1,\dots, u_Z; \overline{\theta}) =   u_{\widetilde{z}}^{-\theta_{\widetilde{
 Гистограмма выборки, полученной моделированием копулой Маршалла-Олкина с параметрами  $\overline{\theta}=(\frac{9}{10},\frac{1}{4})$  и функция плотности распределения (\ref{eq:new_density}) представлены на рисунке \ref{fig:revive_distrib}.
 \begin{figure}[tbph]
   \centering
-  \includegraphics[width = 0.65\textwidth, trim={2cm 1.5cm 0.5cm 1.3cm}, clip]{EM_revive_density_function.png}
+  \includegraphics[width = 0.65\textwidth, trim={2cm 0.5cm 0.5cm 1.3cm}, clip]{EM_revive_density_function.png}
   \caption{Сравнение эмпирической  $h_{XY}^{*}$ с параметрами  $\overline{\theta}=(\frac{9}{10},\frac{1}{4})$  и теоретической $h_{XY}$ функции плотности с.в. $(X,Y)$}\label{fig:revive_distrib}
 \end{figure}
 
