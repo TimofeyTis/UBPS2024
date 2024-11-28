@@ -16,8 +16,8 @@
 % ¬ качестве случайной величины будем использовать временной интервал между проездом двух автомобилей через сечение участка в одной полосе.
 % —ледовательно, дл€ многополосной дороги следует рассматривать систему зависимых случайных величин.  
 
-ѕусть случайные величины $X_z$ с функцией распределени€ $F_z(x)$ есть временной интервал между проездом двух автомобилей через сечение детектируемого участка в зоне $z, z\in Zones.$
-“огда система зависимых случайных величин \((X_1,\dots, X_Z)\) с совместной функцией распределени€ $H(x_1\dots x_Z)$ описывает интенсивность движени€ транспортных потоков через $Zones.$
+ѕусть случайна€ величина $X_z$ с функцией распределени€ $F_z(x)$ есть временной интервал между проездом двух автомобилей через сечение детектируемого участка в зоне $z, z\in Zones.$
+“огда система зависимых случайных величин \((X_1,\dots, X_Z)\) с совместной функцией распределени€ $H(x_1\dots x_Z)$ описывает интенсивность движени€ транспортных потоков через детектируемый участок $Zones.$
 
 ѕо теореме —кл€ра \cite{nelsen2006introduction} совместна€ функци€ распределени€  представима копулой $C$
 \begin{equation}\label{eq:Copula_H}
@@ -34,10 +34,10 @@ C(u_1,\dots, u_Z; \overline{\theta}) =   u_{\widetilde{z}}^{-\theta_{\widetilde{
 {\abovedisplayskip = 0.5em
 \belowdisplayskip = 0em
 \begin{equation} 
-  \begin{split}
-    h(x_1,\dots, x_Z) &= \frac{\partial^Z H}{\partial x_1\dots\partial x_Z} = \frac{\partial^Z C}{\partial u_1\dots\partial u_Z}  \prod_{\mathmakebox[2em][l]{z \in Zones}} \frac{d F_z (x_z)}{d x_z} =\\
-    &= (1-\theta_{\widetilde{z}} ) u_{\widetilde{z}}^{-\theta_{\widetilde{z}}}\prod_{\mathmakebox[2em][l]{z \in Zones}} f_{z}(x_z).
-  \end{split}
+  % \begin{split}
+    h(x_1,\dots, x_Z) % &= \frac{\partial^Z H}{\partial x_1\dots\partial x_Z} = \frac{\partial^Z C}{\partial u_1\dots\partial u_Z}  \prod_{\mathmakebox[2em][l]{z \in Zones}} \frac{d F_z (x_z)}{d x_z} =\\
+    = (1-\theta_{\widetilde{z}} ) u_{\widetilde{z}}^{-\theta_{\widetilde{z}}}\prod_{\mathmakebox[2em][l]{z \in Zones}} f_{z}(x_z).
+  % \end{split}
   \label{eq:new_density}
 \end{equation}
 }
