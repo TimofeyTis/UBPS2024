@@ -18,7 +18,7 @@
 \begin{table}[tbph]
     \caption{Основные обозначения для модели IDM }\label{table:transp_definitions}
     \centering
-    \scalebox{0.68}{
+    \scalebox{0.78}{
     \begin{tabular}{|c|p{0.7\textwidth}|}
         \hline
         Символ                        & Значение                                 \\
@@ -42,7 +42,7 @@
 На рисунке \ref{fig:IDM_illustration} представлено взаимное расположение и характеристики текущего автомобиля, расположенного в $i$-ой  позиции, и $(i-1)$-го автомобиля, находящегося перед ним.
 \begin{figure}[tbph]
     \centering
-    \includegraphics[width = 0.65\textwidth]{sim_descr.pdf}
+    \includegraphics[width = 0.7\textwidth]{sim_descr.pdf}
     \caption{Иллюстрация модели IDM}\label{fig:IDM_illustration}
 \end{figure}
 
@@ -86,7 +86,7 @@
 
 \begin{figure}[tbph]
     \centering
-    \includegraphics[width = 0.5\textwidth]{mobil.pdf}
+    \includegraphics[width = 0.75\textwidth]{mobil.pdf}
     \caption{Модель смены полосы MOBIL}\label{fig:MOBIL}
 \end{figure}
 
@@ -109,6 +109,7 @@ $
     \widetilde{a_j} \geqslant -b.
 $
 \subsection{Описание работы модуля}
+\label{subpar:IDM module}
 Модуль симуляции трафика на  вход получает конфигурационный файл  {VehicleConfig.xml}, в котором содержатся такие параметры как максимально разрешенная скорость, коэффициент торможения (покрытие дороги),  количество полос.
 Дополнительно, в модуль симуляции  поступает  информация о дорожной сети в виде мультиграфа {map.osm},  предобработанная библиотекой osmnx \cite{osmnx}.
 Для построения  маршрутов  транспортных средств  в дорожной сети  используется библиотека  networkx \cite{networkx}.
