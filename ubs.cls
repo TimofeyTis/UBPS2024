@@ -118,7 +118,7 @@ Requires A.Lebedev's Russian fonts set "pscyr" (http://tex.imm.uran.ru/texserver
 \def\abstract#1{\gdef\@abstract{\parbox{108mm}{ \textit{\footnotesize #1} }}} %% текст аннотации
 \def\engabstract#1{\gdef\@engabstract{\parbox{108mm}{\textit{\footnotesize Abstract: #1}}}} %% текст аннотации на английском
 \def\emails#1{\gdef\@emails{#1}} %% адреса электронной почты
-\def\rubric#1{\gdef\@rubric{#1}} %% рубрика
+\def\rubric#1{\gdef\@rubric{\leavevmode\par #1}}
 \def\issue#1{\gdef\@issue{#1}} %% выпуск Сборника
 \def\keywords#1{\gdef\@keywords{#1}} %% ключевые слова
 \def\engkeywords#1{\gdef\@engkeywords{#1}} %% ключевые слова на английском
@@ -128,7 +128,7 @@ Requires A.Lebedev's Russian fonts set "pscyr" (http://tex.imm.uran.ru/texserver
 
 %Колонтитулы%
 \renewcommand{\@evenhead}{\textrm{\textit{Управление большими системами. Выпуск \@issue\hfil}}}
-\renewcommand{\@oddhead}{\textrm{\textit{\hfil\@rubric}}}
+\renewcommand{\@oddhead}{\textrm{\textit{\parbox{\textwidth}{\raggedleft \@rubric}}}}
 \renewcommand{\@evenfoot}{\textrm{\thepage\hfil}}
 \renewcommand{\@oddfoot}{\textrm{\hfil\thepage}}
 

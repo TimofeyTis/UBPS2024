@@ -26,7 +26,7 @@
 %_______________________________________________________________________________________________________
 
 \issue{XX}% Выпуск Сборника - проставляется в процессе верстки
-\rubric{Программы и системы моделирования объектов, средств и систем управления}%  Рубрика Сборника - может быть скорректирована редактором
+\rubric{Программы и системы моделирования объектов,\\средств и систем управления}%  Рубрика Сборника - может быть скорректирована редактором
 %
 % Имеющиеся рубрики (последнюю информацию см. на сайте ubs.mtas.ru):
 %
@@ -79,20 +79,22 @@
 }
 
 \abstract{
-В статье представлены результаты разработки программного комплекса MARLIN24, предназначенного для адаптивного управления светофорными \linebreak объектами. 
-Структура комплекса включает  модуль адаптивного управления светофорными объектами, модуль симуляции движения транспорта и  модуль валидации. 
-Математическая модель процесса управления светофорными \linebreak объектами --- управляемый марковский процесс с конечным числом действий и \linebreak  состояний. Задача поиска эффективного управления в целях  уменьшения суммарного времени нахождения  транспортных средств на детектируемых участках дорожной сети  сводится к задаче мультиагентного обучения с подкреплением (Multiagent Reinforcement Learning for Integrated Network, MARLIN).  Для поиска решения задачи MARLIN был построен алгоритм \linebreak $Q$-обучения.  
-Структура программного комплекса также включает модуль  микросимуляции транспортных потоков  <<разумный водитель>> (Intelligent Driver Model, IDM).
-Для имитации информации о реальной дорожной обстановке, поступающей в виде показаний оптического датчика,  в модуле валидации используются многомерные распределения, полученные с помощью применения копул Маршала-Олкина к маргинальным эмпирических распределениям для временных отметок  срабатывания оптического датчика.
-Для построения маргинальных распределений использовались данные об интенсивности движения через детектируемые участки дорожной сети в период с 2019 по 2020 год.
+В  статье представлены результаты разработки программного комплекса MARLIN24, предназначенного для реализации адаптивного управления светофорными объектами. Цель разработки --- оптимизация работы светофоров для сокращения суммарного времени пребывания транспортных средств в зоне действия оптических детекторов. Архитектура комплекса включает три ключевых модуля: модуль адаптивного управления, модуль имитационного моделирования транспортных потоков и модуль валидации, а также дополнительный модуль визуализации. В модуле адаптивного управления реализованы четыре подхода: фиксированный план; некоординированное подкрепленное обучение; координированное мультиагентное обучение с подкреплением; управление длительностью фаз с помощью  MISO контроллера нечёткой логики (Multiple Input Single Output, MISO). Имитационное моделирование транспортных потоков для проверки результатов управления осуществляется посредством модуля микросимуляции на основе модели <<разумный водитель>>(Intelligent Driver Model, IDM). В модуле валидации для моделирования реалистичных показаний оптических датчиков, отражающих дорожную обстановку, используются копула-функции, принимающие на вход маргинальные распределения. Маргинальные распределения были получены на основе исторических данных об интенсивности движения за период 2019-2020 гг. Разработанный комплекс программ имитационного моделирования MARLIN24 позволяет исследовать и сравнивать между собой ряд моделей управления реальными участками дорожной сети г. Красноярска при различных условиях.
+% В статье представлены результаты разработки программного комплекса MARLIN24, предназначенного для адаптивного управления светофорными \linebreak объектами. 
+% Структура комплекса включает  модуль адаптивного управления светофорными объектами, модуль симуляции движения транспорта и  модуль валидации. 
+% Математическая модель процесса управления светофорными \linebreak объектами --- управляемый марковский процесс с конечным числом действий и \linebreak  состояний. Задача поиска эффективного управления в целях  уменьшения суммарного времени нахождения  транспортных средств на детектируемых участках дорожной сети  сводится к задаче мультиагентного обучения с подкреплением (Multiagent Reinforcement Learning for Integrated Network, MARLIN).  Для поиска решения задачи MARLIN был построен алгоритм \linebreak $Q$-обучения.  
+% Структура программного комплекса также включает модуль  микросимуляции транспортных потоков  <<разумный водитель>> (Intelligent Driver Model, IDM).
+% Для имитации информации о реальной дорожной обстановке, поступающей в виде показаний оптического датчика,  в модуле валидации используются многомерные распределения, полученные с помощью применения копул Маршала-Олкина к маргинальными эмпирическими распределениями для временных отметок  срабатывания оптического датчиков.
+% Для построения маргинальных распределений использовались данные об интенсивности движения через детектируемые участки дорожной сети в период с 2019 по 2020 год.
 }
 
 % В соответствии с требованиями ВАК обязательно приводится расширенная аннотация на английском языке.
 % Объем расширенной английской аннотации -- 150-200 слов.
 % Английский текст проверяется редактором на предмет грамотности и соответствия русскому тексту и может быть изменен без согласования с авторами статьи.
 \engabstract{%
-The paper presents the results of developing the MARLIN24 software  for adaptive traffic light control. The structure of the package includes a module for adaptive traffic light control, a traffic simulation module, and a validation module. The mathematical model of the traffic light control process is described using a Markov decision process with a finite number of actions and states. The task is to find the effective control that reduces the total time vehicles spend at the observed sections of the road network. We formulate the task as a multi-agent reinforcement learning problem (Multiagent Reinforcement Learning for Integrated Network, MARLIN). A $Q$-learning algorithm was developed to solve the MARLIN problem. The structure of the software package also includes a micro-simulation module for traffic flows. This module uses the "Intelligent Driver Model" (IDM). The validation module uses multivariate distributions to simulate real-time traffic data obtained from an optical sensors. The multivariate distributions are constructed by applying Marshall–Olkin copulas to marginal empirical distributions of timestamps for optical sensor triggers. Marginal distributions were constructed based on traffic intensity data for sections of the road network from 2019 to 2020.
+The paper presents the results of  development of the MARLIN24 software suite, designed to implement adaptive control of traffic light systems. The primary objective of the development is to optimize the operation of traffic signals in order to minimize the total time vehicles spend within the detection zones of optical sensors. The architecture of the software suite comprises three principal modules: the adaptive control module, the traffic flow simulation module, and the validation module, complemented by an additional visualization module. The adaptive control module integrates four control approaches: fixed-time planning, uncoordinated reinforcement learning, coordinated multi-agent reinforcement learning, and phase duration control based on a MISO fuzzy logic controller (Multiple Input Single Output, MISO). Traffic flow simulation for performance evaluation is conducted via a microsimulation module utilizing the "Intelligent Driver Model" (IDM). The validation module employs copula functions to generate realistic optical sensor data reflecting actual traffic conditions, with marginal distributions derived from historical traffic intensity data collected during 2019–2020. The MARLIN24 software suite facilitates the analysis and comparison of multiple traffic control models on real-world sections of the road network in Krasnoyarsk under various conditions.
 }
+% The paper presents the results of developing the MARLIN24 software  for adaptive traffic light control. The structure of the package includes a module for adaptive traffic light control, a traffic simulation module, and a validation module. The mathematical model of the traffic light control process is described using a Markov decision process with a finite number of actions and states. The task is to find the effective control that reduces the total time vehicles spend at the observed sections of the road network. We formulate the task as a multi-agent reinforcement learning problem (Multiagent Reinforcement Learning for Integrated Network, MARLIN). A $Q$-learning algorithm was developed to solve the MARLIN problem. The structure of the software package also includes a micro-simulation module for traffic flows. This module uses the "Intelligent Driver Model" (IDM). The validation module uses multivariate distributions to simulate real-time traffic data obtained from an optical sensors. The multivariate distributions are constructed by applying Marshall–Olkin copulas to marginal empirical distributions of timestamps for optical sensor triggers. Marginal distributions were constructed based on traffic intensity data for sections of the road network from 2019 to 2020.
 
 % Обязательно указывается от трёх до шести ключевых слов
 \keywords{
@@ -142,7 +144,7 @@ The paper presents the results of developing the MARLIN24 software  for adaptive
 
 Одна из ранних систем управления городским дорожным движением была UTCS-1 (Urban Traffic Control System) \cite{UTCS1}. Система UTCS-1 использовала фиксированные сигнальные планы, которые менялись в зависимости от времени суток (утренний, дневной, вечерний планы). Для стабильной работы системы UTCS-1 необходимо  регулярно вручную корректировать сигнальные планы, что является существенным недостатком. На данный момент считается устаревшей, так как более современные системы UTCS-2, UTCS-3, SCOOT позволяют гибко управлять дорожным движением в реальном времени.
 
-Система SCOOT (Split Cycle Offset Optimization Technique) \cite{SCOOT} анализирует данные о дорожной обстановке и корректирует светофорные сигналы, чтобы предотвратить образование заторов до их появления. Для работы данной системы требуется установка плотной сети индукционных петель, камер и других датчиков движения на расстоянии не менее  сорока метров и не более двухста метров до регулируемых перекрёстков. Централизованное управление SCOOT направлено на устранение <<эффекта волны>>. Однако продолжительность каждого сигнала светофора (Split) не указывает на изменение времени активной фазы в реальном времени.
+Система SCOOT (Split Cycle Offset Optimization Technique) \cite{SCOOT} анализирует данные о дорожной обстановке и корректирует светофорные сигналы, чтобы предотвратить образование заторов до их появления. Для работы данной системы требуется установка плотной сети индукционных петель, камер и других датчиков движения на расстоянии не менее  сорока метров и не более двухста метров до регулируемых перекрёстков. Централизованное управление SCOOT направлено на устранение <<эффекта волны>>. \textcolor{red}{Однако продолжительность активной фазы в цикле светофора ограничена и не продлевается динамически, так как параметр Split задаёт её максимальный процент от времени в цикле}.
 
 Система OPAC (Optimized Policies for Adaptive Control) \cite{OPAC} "--- это адаптивная система управления светофорами, схожая по назначению с системой SCOOT, но использующая другой подход для оптимизации транспортных потоков. OPAC, разработанная в США, предназначена для улучшения дорожной ситуации в реальном времени путем адаптации фаз светофоров в зависимости от условий трафика. В системе OPAC существует ограничение в восемь фаз для каждого светофора. Это ограничение связано с практическими соображениями, поскольку каждая фаза представляет собой отдельное направление движения или определённую комбинацию разрешённых манёвров на перекрёстке (например, движение прямо, поворот налево или направо). Эти ограничения заложены аппаратно, то есть на уровне контроллеров, и не могут быть изменены конечным пользователем.
 
@@ -157,21 +159,21 @@ The paper presents the results of developing the MARLIN24 software  for adaptive
 % Во {введении }  дается краткий обзор наиболее известных систем адаптивного управления светофорными объектами. Приводятся особенности реализации.
 
 Структура статьи следующая. 
-В {параграфе  \ref{par:MARLIN24 describtion}} приводится общее описание работы четырех модулей комплекса MARLIN24: \\ симуляции,визуализации, валидации  и модуля адаптивного управления светофорными объектами. 
+В {разделе  \ref{par:MARLIN24 describtion}} приводится общее описание работы четырех модулей комплекса MARLIN24: \\ симуляции,визуализации, валидации  и модуля адаптивного управления светофорными объектами. 
 
 
 
-В {параграфе  \ref{par:MARLIN24_sim}} приводится  описание работы модуля симуляции. Данный модуль  предназначен для имитации показаний оптических детекторов. 
+В {разделе  \ref{par:MARLIN24_sim}} приводится  описание работы модуля симуляции. Данный модуль  предназначен для имитации показаний оптических детекторов. 
 В  \ref{subpar: IDM_math} описывается модель IDM, описывающая движение транспортных средств. Он реализует микросимуляционные модели движения, предназначенные для описания перемещения транспортных средств по дорожной сети. 
 В  \ref{subpar:IDM module} приводится описание работы модуля.
 Включение графического интерфейса в модуле визуализации является опциональным и позволяет производить отладку применяемого управления. Данный модуль отображает транспортные средства, дорожную сеть, дополнительную информацию о содержании названий дорог, их координатах. Также в модуле реализована функция ускорения и замедления модельного времени, выделения маршрутов, масштабирования и перемещения области обзора.
 
 
-В {параграфе \ref{par:MARLIN24_val}} приводится  описание работы модуля валидации.
+В {разделе \ref{par:MARLIN24_val}} приводится  описание работы модуля валидации.
 В \ref{subpar:intens model} описание задачи моделирования  интенсивностей транспортных потоков с использованием копул Маршалла-Олкина. 
 В \ref{subpar: valid desc} приводится описание работы модуля на примере реальных данных, полученных с оптических детекторов. 
 
-В {параграфе  \ref{par:MARLIN2}} приводится описание модуля управления светофорными объектами. 
+В {разделе  \ref{par:MARLIN2}} приводится описание модуля управления светофорными объектами. 
 В {\ref{subpar: MARL Q learning}} проблема управления светофорными объектами сводится к задаче мультиагентного обучения с подкреплением для одного и нескольких агентов.
 В {\ref{subpar: MARLIN24_descri}} приводится схема взаимодействия модуля управления светофорными объектами с модулями симуляции и валидации.  
 
@@ -204,13 +206,13 @@ The paper presents the results of developing the MARLIN24 software  for adaptive
 % В настоящей работе представлено описание программного комплекса MARLIN24. Данный комплекс реализует особенности новейших АСУДД.
 В статье в качестве примера приведены две модели участков дорожной сети города Красноярска: модель двух перекрестков ( пр.   Свободный--ул. Лесопарковая, пр. Свободный--ул. Годенко) и модель перекрестков микрорайона Покровский.
 % Для исследования представленных в работе моделей были проведены серии вычислительных экспериментов.
-Оценка эффективности применяемого управления и валидация полученных результатов осуществлялись с помощью симуляционных экспериментов на основе статистических данных с оптических детекторов за  2018 и 2019 года.
+Оценка эффективности применяемого управления и валидация полученных результатов осуществлялись с помощью симуляционных экспериментов на основе статистических данных с  детекторов за 2018--2019 гг.
 
 % Эксперименты проводились на ПК с процессором Intel Core i7-10510U CPU@1.80ГГц и оперативной памятью объемом 8ГБ.
 \newpage
 Общая структура комплекса MARLIN24 приведена на рисунке~\ref{fig:structure_MARLIN24}.
 Комплекс   состоит из четырех модулей:  симуляции,  валидации,  адаптивного управления светофорными объектами, визуализации.
-Модуль визуализации является опциональным. Его функционал и используемые компоненты будут описаны в остальных модулях.
+Модуль визуализации является опциональным. Его функционал и используемые компоненты будут описаны ниже.
 
 % \red{опционально отключаемы}
 % \red{посмотреть статьи с приложениями/ перенести в приложения }
@@ -387,7 +389,7 @@ The paper presents the results of developing the MARLIN24 software  for adaptive
 \end{thebibliography}
 
 \newpage
-\makeenginfo
+\makeenginfo \vspace{-2em}
 \makeauxinfo
 
 \end{document}

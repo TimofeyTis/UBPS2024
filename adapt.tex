@@ -60,7 +60,7 @@ $s_{t+1}=s'$ \linebreak с вероятностью $p(s' \bigm| s_t, a_t)$ согласно матрице 
   %для управляемого марковского процесса с конечным числом действий и состояний в контексте  задачи (\ref{VALUE}).
 % \end{proposition1}
 
-Формула (\ref{BELMAN}) может быть переписана в итерационной записи, называемой $Q$-обучение \cite{SUTTON}.
+Формула (\ref{BELMAN}) может быть переписана в итерационной записи, называемой $Q$-обучением \cite{SUTTON}.
 Функция суммарных вознаграждений при оптимальном управлении на шаге $t$ имеет вид
 {\abovedisplayskip=0.5em
 \belowdisplayskip=0em
@@ -76,8 +76,8 @@ $s_{t+1}=s'$ \linebreak с вероятностью $p(s' \bigm| s_t, a_t)$ согласно матрице 
   \begin{split}
     Q_{l+1}(s,a) & = 
            \underbrace{p(s_{t+1}| s,a)\rule[-0.8em]{0em}{2em}}_{\alpha_{l}} \Bigl( r_{t+1} + \gamma V^*({s}_{t+1})\Bigr)  +                                                                         \\
-                                     & + \underbrace{\sum\limits_{{s}' \in S/{s}_{t+1}} p({s}'| {s},{a}) }_{1-\alpha_{l}}\Bigl( r({s}'| {s},{a}) + \gamma V({s}') \Bigr) = \\
-                                     & =\alpha_{l}\Bigl( r_{l} + \gamma\max\limits_{{s}'}Q_{l}({s}_{t+1},{s}')\Bigr)  + \Bigl(1- \alpha_{l}\Bigr) Q_{l}({s},{a}).
+                                     & + \underbrace{\sum\limits_{{s}' \in \state /{s}_{t+1}} p({s}'| {s},{a}) }_{1-\alpha_{l}}\Bigl( r({s}'| {s},{a}) + \gamma V({s}') \Bigr) = \\
+                                     & =\alpha_{l}\Bigl( r_{l} + \gamma\max\limits_{\textcolor{red}{a}'\in \action}Q_{l}({s}_{t+1},\textcolor{red}{a}')\Bigr)  + \Bigl(1- \alpha_{l}\Bigr) Q_{l}({s},{a}).
   \end{split}
 \end{equation*}
 
@@ -128,7 +128,7 @@ $s_{t+1}=s'$ \linebreak с вероятностью $p(s' \bigm| s_t, a_t)$ согласно матрице 
 \begin{figure}[tbph]
   \centering
   \includegraphics[width = 0.7\textwidth]{mod_scheme.pdf}
-  \caption{Схема алгоритма MARLIN24 }\label{fig:MARLIN_alg}
+  \caption{\textcolor{red}{Схема алгоритма управления светофорными объектами в комплексе MARLIN24 }}\label{fig:MARLIN_alg}
 \end{figure}
 \textcolor{red}{}
 
@@ -141,52 +141,53 @@ $s_{t+1}=s'$ \linebreak с вероятностью $p(s' \bigm| s_t, a_t)$ согласно матрице 
 % зачем ссылка на учебники??? \cite{Ivanov,Gasnikov} 
 реализующий управление согласно выбранной стратегии совокупного управления. 
 
-В качестве альтернативы процессу переключения фаз светофора  (QLEARNING), использующемуся по умолчанию в  модуле адаптивного  управления светофорными объектами, можно  выбрать изменение длительности фазы в следующем цикле. Данный подход был успешно реализован с помощью контроллера нечеткой логики (FLCONTROL) в работе \cite{My3}. Для управления светофором на основе метода Мамдани разработана система типа MISO (Multiple Input Single Output) с тремя входами \cite{refarticle24}. 
+В качестве альтернативы процессу переключения фаз светофора  (QLEARNING), использующемуся по умолчанию в  модуле адаптивного  управления светофорными объектами, можно  выбрать изменение длительности фазы в следующем цикле. Данный подход был успешно реализован с помощью контроллера нечеткой логики (FLCONTROL) в работе \cite{My3}. 
+% Для управления светофором на основе метода Мамдани разработана система типа MISO (Multiple Input Single Output) с тремя входами \cite{refarticle24}. 
 
-Следующие лингвистические переменные рассматриваются в качестве входных данных:
-время суток с множеством термов ${\cal{DT}} = \{\text{morning}, \text{day}, \text{evening}, \text{night}\},$
-плотность движения с множеством термов ${\cal V} =  \{ \text{run}, \text{wait}, \text{jam}\},$
-время нахождения в зоне детекции с множеством термов \linebreak ${\cal R} =  \{\text{small}, \text{medium}, \text{large}\}.$
-Лингвистическая переменная выхода контроллера --- длительность фазы, определенная множеством термов  $P=$ 
-\{ {long}, {medium}, {short}\}.  
-База правил представлена двенадцатью правилами (таблица~\ref{table:FL_rules}) следующего вида:
-\begin{equation*}
-\begin{split}
-    R:  &{\rm IF}\  (day\_time = A)\ {\rm AND}\  (vehicles = B)\  {\rm AND}\  (reward = C) \\
-    &{\rm THEN}\  (phase = D),\;\rm{WHERE}\; A \in {\cal DT}, B \in {\cal V}, C \in {\cal R}, D \in {\cal P}.
-\end{split}
-\end{equation*}
+% Следующие лингвистические переменные рассматриваются в качестве входных данных:
+% время суток с множеством термов ${\cal{DT}} = \{\text{morning}, \text{day}, \text{evening}, \text{night}\},$
+% плотность движения с множеством термов ${\cal V} =  \{ \text{run}, \text{wait}, \text{jam}\},$
+% время нахождения в зоне детекции с множеством термов \linebreak ${\cal R} =  \{\text{small}, \text{medium}, \text{large}\}.$
+% Лингвистическая переменная выхода контроллера --- длительность фазы, определенная множеством термов  $P=$ 
+% \{ {long}, {medium}, {short}\}.  
+% База правил представлена двенадцатью правилами (таблица~\ref{table:FL_rules}) следующего вида:
+% \begin{equation*}
+% \begin{split}
+%     R:  &{\rm IF}\  (day\_time = A)\ {\rm AND}\  (vehicles = B)\  {\rm AND}\  (reward = C) \\
+%     &{\rm THEN}\  (phase = D),\;\rm{WHERE}\; A \in {\cal DT}, B \in {\cal V}, C \in {\cal R}, D \in {\cal P}.
+% \end{split}
+% \end{equation*}
 
 
-\begin{table}[h]
-  \caption{Набор правил нечеткого вывода}
-  \label{table:FL_rules}
-  \centering
-  \scalebox{0.75}
-  {
-  \begin{tabular}{c|c|c|c|c|c|c|}
-  \cline{2-7}
-                                  & $R_1$ & $R_2$ & $R_3$ & $R_4$ & $R_5$ & $R_6$  \\ \hline
-  \multicolumn{1}{|c|}{$day\_time$} & morning  & night  & -  & -  & day  & day  \\ \hline
-  \multicolumn{1}{|c|}{$vehicles$}  & -  & -  & -  & run  & jam  & -   \\ \hline
-  \multicolumn{1}{|c|}{$reward$}    & -  & -  & small  & -  &medium & medium  \\ \hline
-  \multicolumn{1}{|c|}{$phase$}     & short  & short  & short  & short & short  & medium   \\ \hline
-  \end{tabular}
-  }
+% \begin{table}[h]
+%   \caption{Набор правил нечеткого вывода}
+%   \label{table:FL_rules}
+%   \centering
+%   \scalebox{0.75}
+%   {
+%   \begin{tabular}{c|c|c|c|c|c|c|}
+%   \cline{2-7}
+%                                   & $R_1$ & $R_2$ & $R_3$ & $R_4$ & $R_5$ & $R_6$  \\ \hline
+%   \multicolumn{1}{|c|}{$day\_time$} & morning  & night  & -  & -  & day  & day  \\ \hline
+%   \multicolumn{1}{|c|}{$vehicles$}  & -  & -  & -  & run  & jam  & -   \\ \hline
+%   \multicolumn{1}{|c|}{$reward$}    & -  & -  & small  & -  &medium & medium  \\ \hline
+%   \multicolumn{1}{|c|}{$phase$}     & short  & short  & short  & short & short  & medium   \\ \hline
+%   \end{tabular}
+%   }
 
-  \medskip
+%   \medskip
   
-  \scalebox{0.75}
-  {
-  \begin{tabular}{c|c|c|c|c|c|c|}
-  \cline{2-7}
-                                 &$R_7$ & $R_8$ & $R_9$ & $R_{10}$ & $R_{11}$ & $R_{12}$ \\ \hline
-  \multicolumn{1}{|c|}{$day\_time$} & evening &  day   & evening  & -   & -   & -   \\ \hline
-  \multicolumn{1}{|c|}{$vehicles$}  &  -  & -  & -  & wait   & jam   & jam   \\ \hline
-  \multicolumn{1}{|c|}{$reward$}    &  medium  & large  & large  & medium   & large   & small   \\ \hline
-  \multicolumn{1}{|c|}{$phase$}     &  medium  & long  & long  & long   & long   & short   \\ \hline
-  \end{tabular}
-  }
-  \end{table}
+%   \scalebox{0.75}
+%   {
+%   \begin{tabular}{c|c|c|c|c|c|c|}
+%   \cline{2-7}
+%                                  &$R_7$ & $R_8$ & $R_9$ & $R_{10}$ & $R_{11}$ & $R_{12}$ \\ \hline
+%   \multicolumn{1}{|c|}{$day\_time$} & evening &  day   & evening  & -   & -   & -   \\ \hline
+%   \multicolumn{1}{|c|}{$vehicles$}  &  -  & -  & -  & wait   & jam   & jam   \\ \hline
+%   \multicolumn{1}{|c|}{$reward$}    &  medium  & large  & large  & medium   & large   & small   \\ \hline
+%   \multicolumn{1}{|c|}{$phase$}     &  medium  & long  & long  & long   & long   & short   \\ \hline
+%   \end{tabular}
+%   }
+%   \end{table}
 
-На основе выходных данных модуля принимается решение о переключении фазы светофоров или об изменении длительности следующей фазы. % (см. рис. \ref{MARLIN_mod}).
+% На основе выходных данных модуля принимается решение о переключении фазы светофоров или об изменении длительности следующей фазы. % (см. рис. \ref{MARLIN_mod}).
